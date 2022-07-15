@@ -1,28 +1,96 @@
-/* div {
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('./docs/assets/images/Horror-Film-1288x726.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#example {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
-.div1 {
-    display: block;
-    background-image: url(./Stranger-Things-adventure-game.gif);
-    width: 900px;
-    height: 500px;
+    position: relative;
+    top: 128px;
+    left: 305px;
+    border: 2px solid black;
+    background-image: url('./docs/assets/images/ajustado_02.gif');
+    border-radius: 0.5vw;
+    /* transform: scale(-1, -1); */
+    transform: scale(-1, -1) skew(0.3deg);
+}
+.botao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        position: relative;
+        top: 150px;
+}
+
+.darkroom {
+    border: 10px solid black;
+    height: 550px;
+    width: 47%;
+    position: relative;
+    left: 305px;
+    top: 128px;
+    transform: scale(-1, -1);
+}
+.tv {
+    width: 100%;
     position: absolute;
 }
-body {
-    background-color: black;
-}
-.div2 {
-    background-image: url(./Horror-Film-1288x726.jpeg);
-    /* display: block;
-    justify-content: center;
-    align-items: center; */
-    /* background-image: url(./Stranger-Things-adventure-game.gif); */
-    display: block;
-    margin: 15px;
-    margin-left: 100px;
-    height: 720px;
+.npc {
     position: relative;
+    left: 100px;
+    bottom: 300px;
+    width: 135px;
+    transform: scale(-1, -1);
+}
+.monster {
+    position: relative;
+    bottom: 350px;
+    right: 480px;
+    width: 90px;
+    transform: scale(-1, -1);
+}
+.monster2 {
+    position: relative;
+    bottom: 350px;
+    right: 530px;
+    width: 90px;
+    transform: scale(-1, -1);
+}
+.room {
+    border: 10px solid black;
+    height: 550px;
+    width: 47%;
+    position: relative;
+    left: 305px;
+    top: 128px;
+}
+.npc2 {
+    position: relative;
+    right: 325px;
+    top: 120px;
+    width: 135px;
+    
+}
+.monster3 {
+    position: relative;
+    top: 135px;
+    right: 110px;
+    width: 90px;
+    
+}
+.monster4 {
+    position: relative;
+    top: 135px;
+    right: 60px;
+    width: 90px;
+    
 }
