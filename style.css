@@ -1,0 +1,28 @@
+/* div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.div1 {
+    display: block;
+    background-image: url(./Stranger-Things-adventure-game.gif);
+   width: 900px;
+    height: 500px;
+    position: relative;
+}
+body {
+    background-color: black;
+}
+.div2 {
+    background-image: url(./Horror-Film-1288x726.jpeg);
+    /* display: block;
+    justify-content: center;
+    align-items: center; */
+    /* background-image: url(./Stranger-Things-adventure-game.gif); */
+    display: block;
+    margin: 15px;
+    margin-left: 100px;
+    height: 720px;
+    position: absolute;
+}
