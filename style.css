@@ -7,9 +7,9 @@
 .div1 {
     display: block;
     background-image: url(./Stranger-Things-adventure-game.gif);
-   width: 900px;
+    width: 900px;
     height: 500px;
-    position: relative;
+    position: absolute;
 }
 body {
     background-color: black;
@@ -24,5 +24,5 @@ body {
     margin: 15px;
     margin-left: 100px;
     height: 720px;
-    position: absolute;
+    position: relative;
 }
