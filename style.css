@@ -15,10 +15,10 @@ body {
     top: 128px;
     left: 305px;
     border: 2px solid black;
-    background-image: url('./docs/assets/images/ajustado_02.gif');
+    background-image: url('./docs/assets/images/pixelart.jpg.webp');
     border-radius: 0.5vw;
     /* transform: scale(-1, -1); */
-    transform: scale(-1, -1) skew(0.3deg);
+    /* transform: scale(-1, -1) skew(0.3deg); */
 }
 .botao {
         display: flex;
