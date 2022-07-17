@@ -66,4 +66,6 @@ document.addEventListener('keydown', (e) => {
             break;
     }
 });
-/* como posso fazer pra que quando eu apertar espaco e a arrowup a pagina nao mova pra cima? */
+/* como posso fazer pra que quando eu apertar espaco e a arrowup a pagina nao mova pra cima?
+quando aperto pra pular, posso pular mais de 1x, como nao fazer isso? */
+
