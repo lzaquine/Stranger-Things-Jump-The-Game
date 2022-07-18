@@ -13,9 +13,9 @@
     transform: translate(-50%, -50%);
     width: 48vw;
     height: 66vh;
-    background-color: black;
-    border-radius: 10px;
-    
+    background-image: url('./docs/assets/images/pixelart.jpg.webp');
+    background-size: cover;
+    border-radius: 10px;   
 }
 .tv {
     background-repeat: no-repeat;
