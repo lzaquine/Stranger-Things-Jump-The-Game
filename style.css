@@ -13,7 +13,7 @@
     transform: translate(-50%, -50%);
     width: 48vw;
     height: 66vh;
-    background-image: url('./docs/assets/images/pixelart.jpg.webp');
+    background-image: url('./docs/assets/images/pixelart.jpg');
     background-size: cover;
     border-radius: 10px;   
 }
