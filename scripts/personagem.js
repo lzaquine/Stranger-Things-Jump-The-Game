@@ -59,5 +59,3 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('keyup', (e) => {
     keys[e.code] = false;
 });
-// test mobile touch
-this.addEventListener('touchend', function(e){happens(e)}, false);
