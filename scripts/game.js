@@ -29,7 +29,7 @@ function startUpsideDown() {
      isRunning = true; 
      gameSpeed = 15;
      gravity = 0.9;
-     player2 = new Player2(125, 5, 130, 135);
+     player2 = new Player2(125, 5, 50, 100);
 }
 
 // Start ao contratio
