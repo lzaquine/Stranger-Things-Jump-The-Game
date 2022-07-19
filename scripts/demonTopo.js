@@ -34,7 +34,7 @@ class Obstacle2 {
 
 function spawnObstacle2() {
     let size = demonSize(40, 40);
-    let obstacle = new Obstacle(700, -15, size, size, 'black');
+    let obstacle = new Obstacle(700, 0, size, size, 'black');
 
     
     obstacles.push(obstacle);
@@ -43,3 +43,5 @@ function spawnObstacle2() {
 function demonSize(min, max){
     return Math.round(Math.random() * (max-min) + min)
 }
+
+// nao preciso me preocupar com a colisao do demontopo e do personagem1 pq eles nao vao estar no mesmo modo?

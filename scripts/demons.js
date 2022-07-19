@@ -28,12 +28,12 @@ class Obstacle {
     } */
 
     demonDraw() {
-        ctx.drawImage(this.img2, this.x, this.y, 100, 100);
+        ctx.drawImage(this.img2, this.x, this.y, this.width, this.height);
     }
 } 
 
 function spawnObstacle() {
-    let size = demonSize(40, 40);
+    let size = demonSize(100, 100);
     let obstacle = new Obstacle(cWidth + size, cHeight - size, size, size, 'black');
 
     

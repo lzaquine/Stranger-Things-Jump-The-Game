@@ -1,10 +1,9 @@
 class Player {
-    constructor(x, y, width, height, color) {
+    constructor(x, y, width, height) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.color = color;
 
         this.speedY = 0;
         this.jumpForce = 9;
@@ -23,10 +22,14 @@ class Player {
         } else {
             this.jumpTimer = 0;
         } 
-
+        
+        /* if (this.y > cHeigh + this.height) {
+            this.y = cHeight
+        } */
+        
         this.y += this.speedY;
 
-        if(this.y + this.height < cHeight) {
+        if(this.y + this.height < cHeight  ) {
             this.speedY += gravity;
             this.grounded = false;
         } else {
@@ -57,7 +60,7 @@ class Player {
     } */
 
     playerDraw() {
-        ctx.drawImage(this.img, this.x, this.y, 130, 135);
+        ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
 }
 
