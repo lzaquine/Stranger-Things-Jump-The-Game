@@ -8,10 +8,34 @@ class Player {
 
         this.speedY = 0;
         this.jumpForce = 15;
-        this.originalHeight = height;
         this.grounded = false;
         this.jumpTimer = 0;
     }
+
+    /* left() {
+        return this.x;
+    }
+    
+    right() {
+        return this.x + this.width;
+    }
+    
+    top() {
+        return this.y;
+    }
+
+    bottom() {
+        return this.y + this.height;
+    }
+
+    crashWith(demon) {
+        return !(
+        this.bottom() < demon.top() || 
+        this.top() > demon.bottom() || 
+        this.right() < demon.left() || 
+        this.left() > demon.right()
+         );
+    }*/
 
     animate() {
         if (keys['KeyW']) {
