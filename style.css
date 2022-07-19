@@ -24,3 +24,17 @@
     width: 100vw;
     height: 100vh;
 }
+.btn_start {
+    position: absolute;
+    /* border: 3px solid white; */
+    width: 185px;
+    height: 88px;
+    top: 307px;
+    right: 270px;
+    transform: skew(3deg);
+    background-color: black;
+    border-radius: 10px;
+    font-size: 24px;   
+    color: white;
+    border: none;
+}
