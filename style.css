@@ -15,6 +15,7 @@
     height: 66vh;
     background-image: url('./docs/assets/images/pixelart.jpg');
     background-size: cover;
+    /* opacity: 75%; --> quando der game over, fazer um opacity pequeno e mostrar a mao*/
     border-radius: 10px;   
 }
 .tv {
