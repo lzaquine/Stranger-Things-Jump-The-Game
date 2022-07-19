@@ -21,7 +21,7 @@ function start() {
     gameSpeed = 15;
     gravity = 0.9;
     player = new Player(125, 10, 50, 50, 'black');
-    player2 = new Player2(550, 0, 50, 50, 'black');
+    player2 = new Player2(125, 0, 50, 50, 'black');
     /* requestAnimationFrame(update); */
 };
 
@@ -44,6 +44,7 @@ function update() {
     spawnTimer--;
     if(spawnTimer <= 0) {
         spawnObstacle();
+        spawnObstacle2();
         spawnTimer = initialSpawTimer - gameSpeed * 25;
 
         if (spawnTimer < 60) {

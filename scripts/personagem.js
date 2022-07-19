@@ -57,7 +57,7 @@ class Player {
     } */
 
     playerDraw() {
-        ctx.drawImage(this.img, this.x, this.y, 100, 100);
+        ctx.drawImage(this.img, this.x, this.y, 130, 135);
     }
 }
 

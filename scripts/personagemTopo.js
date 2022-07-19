@@ -24,7 +24,7 @@ class Player2 {
             this.jumpTimer = 0;
         } 
 
-        /* this.y = this.speedY; */ 
+        /* this.y += this.speedY; */
 
         if(this.y + this.height < cHeight) {
             this.speedY += gravity;
@@ -56,6 +56,6 @@ class Player2 {
         ctx.closePath();
     } */
     playerDraw() {
-        ctx.drawImage(this.img, this.x, this.y, 100, 100);
+        ctx.drawImage(this.img, this.x, this.y, 130, 135);
     }
 }
