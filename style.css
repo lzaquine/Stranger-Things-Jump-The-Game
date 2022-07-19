@@ -27,14 +27,28 @@
 .btn_start {
     position: absolute;
     /* border: 3px solid white; */
-    width: 185px;
-    height: 88px;
-    top: 307px;
-    right: 270px;
-    transform: skew(3deg);
+    width: 12vw;
+    height: 6vh;
+    top: 93%;
+    right: 67%;
+    /* transform: skew(3deg); */
     background-color: black;
     border-radius: 10px;
-    font-size: 24px;   
+    font-size: 12px;   
+    color: white;
+    border: none;
+}
+#upside-down {
+    position: absolute;
+    /* border: 3px solid white; */
+    width: 12vw;
+    height: 6vh;
+    top: 93%;
+    right: 31.5%;
+    /* transform: skew(3deg); */
+    background-color: black;
+    border-radius: 10px;
+    font-size: 12px;   
     color: white;
     border: none;
 }
