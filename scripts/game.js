@@ -20,7 +20,7 @@ function start() {
     isRunning = true; // false pra comecar o jogo
     gameSpeed = 15;
     gravity = 0.9;
-    player = new Player(125, 10, 130, 135);
+    player = new Player(125, 10, 50, 100);
     /* player2 = new Player2(125, 0, 130, 135); */
     /* requestAnimationFrame(update); */
 };
@@ -105,3 +105,6 @@ upsideDownBtn.addEventListener("click", startUpsideDown)
 
 //cortar as imgs
 // background image como fazer a troca delas com js ou css?
+// jogo ta mt rapido quando clico no botao mais de 1x
+
+// bonus-> criar uma outra classe de demons, so que puxando aquela mesma e usar mais um loop pra criar os demons

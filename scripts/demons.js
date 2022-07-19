@@ -10,7 +10,7 @@ class Obstacle {
 
         const img2 = new Image();
         img2.addEventListener('load', () => {});
-        img2.src = '../docs/assets/images/demogorgon.png'
+        img2.src = '../docs/assets/images/smalldemon-removebg-preview.png'
         this.img2 = img2;
     }
 
@@ -33,8 +33,8 @@ class Obstacle {
 } 
 
 function spawnObstacle() {
-    let size = demonSize(100, 100);
-    let obstacle = new Obstacle(cWidth + size, cHeight - size, size, size, 'black');
+    let size = demonSize(65, 65);
+    let obstacle = new Obstacle(cWidth + size, cHeight - size, size, size);
 
     
     obstacles.push(obstacle);

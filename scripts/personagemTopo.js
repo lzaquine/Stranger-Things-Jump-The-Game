@@ -42,10 +42,10 @@ class Player2 {
     jump() {
         if (this.grounded && this.jumpTimer === 0) {
             this.jumpTimer = 1;
-            this.speedY = -this.jumpForce;
+            this.speedY = this.jumpForce;
         } else if (this.jumpTimer < 0 && this.jumpTimer > 10) {
             this.jumpTimer++;
-            this.speedY = -this.jumpForce - (this.jumpTimer / 50);
+            this.speedY = this.jumpForce - (this.jumpTimer / 50);
         }
     }
 

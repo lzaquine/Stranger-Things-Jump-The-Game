@@ -12,7 +12,7 @@ class Player {
 
         const img = new Image();
         img.addEventListener('load', () => {});
-        img.src = '../docs/assets/images/Player.gif'
+        img.src = '../docs/assets/images/Small_Char.png'
         this.img = img;
     }
 
