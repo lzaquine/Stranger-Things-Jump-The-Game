@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 
 const cWidth = canvas.width;
 const cHeight = canvas.height;
-
+    
 
 let player;
 let gravity;
@@ -14,33 +14,31 @@ let interval = null;
 let isRunning = false;
 let frames = 0;
 
+
 function start() {
-    this.interval = setInterval(this.updateGameArea, 1000 / 60);
-    this.isRunning = true;
+    interval = setInterval(update, 1000 / 60);
+    isRunning = true; // false pra comecar o jogo
     gameSpeed = 15;
     gravity = 0.9;
-    player = new Player(125, 400, 50, 50, 'black');
-    requestAnimationFrame(update);
+    player = new Player(125, 350, 50, 50, 'black');
+    player2 = new Player2(550, 0, 50, 50, 'black');
+    /* requestAnimationFrame(update); */
 };
 
-function reset () {
-    
-    this.frames = 0;
-    this.player.speedY = 0;
-    this.start();
-};
-
-function stop(){
-    
-    clearInterval(this.interval)
-    this.isRunning = false
-};
+/* function reset() {
+    clearInterval(interval);
+    player.x = x;
+    player.y = y;
+    obstacles = [];
+    spawnTimer = initialSpawTimer;
+    gameSpeed = 15;
+} */
 
 let initialSpawTimer = 100;
 let spawnTimer = initialSpawTimer;
 
 function update() {
-    requestAnimationFrame(update);
+    /* let requestID = requestAnimationFrame(update); */
     ctx.clearRect(0, 0, cWidth, cHeight);
 
     spawnTimer--;
@@ -59,41 +57,32 @@ function update() {
             obstacles.splice(i, 1);
         }
 
-        if (player.x < demon.x + demon.width &&
-            player.x + player.width > demon.x &&
-            player.y < demon.y + demon.height &&
-            player.y + player.height > demon.y) {
-                // this.stop();
+        if (player.x + player.width >= demon.x &&
+            !(demon.x + demon.width <= player.x) &&
+            player.y + player.height >= demon.y) {
                 obstacles = [];
-                
-                //aqui o player assume a posicao do demon. talvez
-                /* player.x = demon.x;
-                player.y = demon.y; */
-
-
-                // spawnTimer = initialSpawTimer;
-                //gameSpeed = 15;
+                clearInterval(interval);
+                isRunning = false;
+                spawnTimer = initialSpawTimer;
+                gameSpeed = 15;
         }
-
+        // quando passa pelo x e do width do player, mas pertinho, ainda acaba o jogo com a posicao do demon mais pra tras
         
 
         demon.update();
     }
 
-    /* checkGameOver = () => {
-        const crashed = this.obstacles.some((obstacle) => {
-            return this.player.crashWith(obstacle);
-        });
-
-        if (crashed) {
-            this.stop();
-        }
-    }; */
-
-    
     player.animate();
+    player2.animate();
 
     gameSpeed += 0.005;
-}
+
+};
 start();
-/* stop(); */
+
+//
+
+// classe e funcao diferenca
+
+
+// criar funcao reset com tudo 0 pra colocar dentro do start ou stop dai aperto o botao e vai

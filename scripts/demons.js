@@ -34,3 +34,15 @@ function spawnObstacle() {
 function demonSize(min, max){
     return Math.round(Math.random() * (max-min) + min)
 }
+
+
+// game = start
+//start new game
+/* let newGame = document.querySelector('.btn_start');
+newGame.addEventListener('click', function(){
+    if(!isRunning) {
+        reset();
+    } else if (isRunning) {
+        start();
+    }
+}); */
