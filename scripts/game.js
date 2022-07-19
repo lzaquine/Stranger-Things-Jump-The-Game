@@ -20,10 +20,20 @@ function start() {
     isRunning = true; // false pra comecar o jogo
     gameSpeed = 15;
     gravity = 0.9;
-    player = new Player(125, 10, 50, 50, 'black');
-    player2 = new Player2(125, 0, 50, 50, 'black');
+    player = new Player(125, 10, 130, 135);
+    /* player2 = new Player2(125, 0, 130, 135); */
     /* requestAnimationFrame(update); */
 };
+
+function startUpsideDown() {
+     interval = setInterval(update, 1000 / 60);
+     isRunning = true; // false pra comecar o jogo
+     gameSpeed = 15;
+     gravity = 0.9;
+     player = new Player2(125, 0, 130, 135);
+}
+
+// Start ao contratio
 
 /* function reset() {
     clearInterval(interval);
@@ -44,7 +54,7 @@ function update() {
     spawnTimer--;
     if(spawnTimer <= 0) {
         spawnObstacle();
-        spawnObstacle2();
+        //spawnObstacle2();
         spawnTimer = initialSpawTimer - gameSpeed * 25;
 
         if (spawnTimer < 60) {
@@ -58,9 +68,9 @@ function update() {
             obstacles.splice(i, 1);
         }
 
-        if (player.x + player.width >= demon.x &&
-            !(demon.x + demon.width <= player.x) &&
-            player.y + player.height >= demon.y) {
+        if (player.x + player.width > demon.x &&
+            !(demon.x + demon.width < player.x) &&
+            player.y + player.height > demon.y) {
                 obstacles = [];
                 clearInterval(interval);
                 isRunning = false;
@@ -74,12 +84,17 @@ function update() {
     }
 
     player.animate();
-    player2.animate();
+    //player2.animate();
 
     gameSpeed += 0.005;
 
 };
-start();
+
+const startBtn = document.getElementById("start");
+const upsideDownBtn = document.getElementById("upside-down")
+startBtn.addEventListener("click", start)
+upsideDownBtn.addEventListener("click", startUpsideDown)
+
 
 //
 
@@ -87,3 +102,5 @@ start();
 
 
 // criar funcao reset com tudo 0 pra colocar dentro do start ou stop dai aperto o botao e vai
+
+//cortar as imgs
