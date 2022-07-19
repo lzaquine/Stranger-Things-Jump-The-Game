@@ -6,6 +6,7 @@ const cHeight = canvas.height;
     
 
 let player;
+let player2;
 let gravity;
 let obstacles = [];
 let gameSpeed;
@@ -17,20 +18,18 @@ let frames = 0;
 
 function start() {
     interval = setInterval(update, 1000 / 60);
-    isRunning = true; // false pra comecar o jogo
+    isRunning = true; 
     gameSpeed = 15;
     gravity = 0.9;
     player = new Player(125, 10, 50, 100);
-    /* player2 = new Player2(125, 0, 130, 135); */
-    /* requestAnimationFrame(update); */
 };
 
 function startUpsideDown() {
      interval = setInterval(update, 1000 / 60);
-     isRunning = true; // false pra comecar o jogo
+     isRunning = true; 
      gameSpeed = 15;
      gravity = 0.9;
-     player = new Player2(125, 0, 130, 135);
+     player2 = new Player2(125, 5, 130, 135);
 }
 
 // Start ao contratio
@@ -48,13 +47,12 @@ let initialSpawTimer = 100;
 let spawnTimer = initialSpawTimer;
 
 function update() {
-    /* let requestID = requestAnimationFrame(update); */
     ctx.clearRect(0, 0, cWidth, cHeight);
 
     spawnTimer--;
     if(spawnTimer <= 0) {
         spawnObstacle();
-        //spawnObstacle2();
+        spawnObstacle2();
         spawnTimer = initialSpawTimer - gameSpeed * 25;
 
         if (spawnTimer < 60) {
@@ -84,7 +82,7 @@ function update() {
     }
 
     player.animate();
-    //player2.animate();
+    player2.animate();
 
     gameSpeed += 0.005;
 
