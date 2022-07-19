@@ -20,7 +20,7 @@ function start() {
     isRunning = true; // false pra comecar o jogo
     gameSpeed = 15;
     gravity = 0.9;
-    player = new Player(125, 350, 50, 50, 'black');
+    player = new Player(125, 10, 50, 50, 'black');
     player2 = new Player2(550, 0, 50, 50, 'black');
     /* requestAnimationFrame(update); */
 };

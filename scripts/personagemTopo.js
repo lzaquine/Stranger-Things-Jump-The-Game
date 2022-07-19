@@ -10,6 +10,11 @@ class Player2 {
         this.jumpForce = 9;
         this.grounded = false;
         this.jumpTimer = 0;
+
+        const img = new Image();
+        img.addEventListener('load', () => {});
+        img.src = '../docs/assets/images/PlayerTop.gif'
+        this.img = img;
     }
 
     animate() {
@@ -30,7 +35,8 @@ class Player2 {
             this.y = cHeight - this.height;
         }
 
-        this.draw();
+        /* this.draw(); */
+        this.playerDraw();
     }
 
     jump() {
@@ -43,10 +49,13 @@ class Player2 {
         }
     }
 
-    draw() {
+    /* draw() {
         ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.closePath();
+    } */
+    playerDraw() {
+        ctx.drawImage(this.img, this.x, this.y, 100, 100);
     }
 }
