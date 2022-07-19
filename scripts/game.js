@@ -104,3 +104,4 @@ upsideDownBtn.addEventListener("click", startUpsideDown)
 // criar funcao reset com tudo 0 pra colocar dentro do start ou stop dai aperto o botao e vai
 
 //cortar as imgs
+// background image como fazer a troca delas com js ou css?
