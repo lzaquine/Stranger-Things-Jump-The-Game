@@ -7,7 +7,7 @@ class Player {
         this.color = color;
 
         this.speedY = 0;
-        this.jumpForce = 15;
+        this.jumpForce = 9;
         this.grounded = false;
         this.jumpTimer = 0;
     }
@@ -62,7 +62,7 @@ class Player {
         if (this.grounded && this.jumpTimer === 0) {
             this.jumpTimer = 1;
             this.speedY = -this.jumpForce;
-        } else if (this.jumpTimer > 0 && this.jumpTimer < 15) {
+        } else if (this.jumpTimer > 0 && this.jumpTimer < 10) {
             this.jumpTimer++;
             this.speedY = -this.jumpForce - (this.jumpTimer / 50);
         }
