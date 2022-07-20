@@ -61,7 +61,7 @@ class Player2 {
 
     if (this.y > 0) {
       this.speedY -= gravity;
-      this.grounded = true;
+      this.grounded = false;
     } else {
       this.speedY = 0;
       this.grounded = true;
