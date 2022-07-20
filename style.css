@@ -1,6 +1,6 @@
 @font-face {
     font-family: Benguiat Bold;
-    src: url('.docs/assets/fonts/Benguiat Bold.ttf');
+    src: url('./docs/assets/fonts/Benguiat Bold.ttf');
 }
 
 * {

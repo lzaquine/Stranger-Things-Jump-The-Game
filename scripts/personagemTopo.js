@@ -13,7 +13,7 @@ class Player2 {
 
         const img = new Image();
         img.addEventListener('load', () => {});
-        img.src = '../docs/assets/images/Small_Char_Top.png';
+        img.src = './docs/assets/images/Small_Char_Top.png';
         this.img = img;
     };
 

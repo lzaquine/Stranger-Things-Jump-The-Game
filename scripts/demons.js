@@ -10,7 +10,7 @@ class Obstacle {
 
         const img2 = new Image();
         img2.addEventListener('load', () => {});
-        img2.src = '../docs/assets/images/smalldemon-removebg-preview.png';
+        img2.src = './docs/assets/images/smalldemon-removebg-preview.png';
         this.img2 = img2;
     };
 

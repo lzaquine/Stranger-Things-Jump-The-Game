@@ -10,7 +10,7 @@ class Obstacle2 {
 
         const img2 = new Image();
         img2.addEventListener('load', () => {});
-        img2.src = '../docs/assets/images/smalldemon_top.png'; // nao ta trocando a img, ela continua como a mesma 'normal'
+        img2.src = './docs/assets/images/smalldemon_top.png'; // nao ta trocando a img, ela continua como a mesma 'normal'
         this.img2 = img2;
     };
 
