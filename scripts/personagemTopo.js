@@ -1,13 +1,12 @@
 class Player2 {
-    constructor(x, y, width, height, color) {
+    constructor(x, y, width, height) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.color = color;
 
         this.speedY = 0;
-        this.jumpForce = 9;
+        this.jumpForce = 12;
         this.grounded = false;
         this.jumpTimer = 0;
 
@@ -31,7 +30,7 @@ class Player2 {
             this.grounded = true;
         } else {
             this.speedY = 0;
-            this.grounded = false;
+            this.grounded = true;
             this.y = 0 ;
         };
 
@@ -41,10 +40,10 @@ class Player2 {
     jump() {
         if (this.grounded && this.jumpTimer === 0) {
             this.jumpTimer = 1;
-            this.speedY = this.jumpForce;
-        } else if (this.jumpTimer < 0 && this.jumpTimer > 10) {
+            this.speedY += this.jumpForce;
+        } else if (this.jumpTimer > 0 && this.jumpTimer > 10) {
             this.jumpTimer++;
-            this.speedY = this.jumpForce - (this.jumpTimer / 50);
+            this.speedY = -this.jumpForce - (this.jumpTimer / 50);
         };
     };
 

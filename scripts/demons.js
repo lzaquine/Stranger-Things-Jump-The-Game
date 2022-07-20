@@ -27,7 +27,12 @@ class Obstacle {
 
 function spawnObstacle() {
     let size = demonSize(65, 65);
-    let obstacle = new Obstacle(cWidth + size, cHeight - size, size, size);
+    let obstacle;
+    if (player.y <= 50) {
+        obstacle = new Obstacle2(700, 0, size, size);
+    } else {
+        obstacle = new Obstacle(cWidth + size, cHeight - size, size, size);
+    }
     
     obstacles.push(obstacle);
 };

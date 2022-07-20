@@ -23,15 +23,11 @@ class Player {
             this.jumpTimer = 0;
         };
         
-        /* if (this.y > cHeigh + this.height) {
-            this.y = cHeight
-        } */
-        
         this.y += this.speedY;
 
         if(this.y + this.height < cHeight) {
             this.speedY += gravity;
-            this.grounded = false;
+            this.grounded = true
         } else {
             this.speedY = 0;
             this.grounded = true;
