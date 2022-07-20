@@ -42,7 +42,7 @@ class Player {
   }
 
   animate() {
-    if (keys["KeyW"]) {
+    if (keys["KeyZ"]) {
       this.jump();
     } else {
       this.jumpTimer = 0;

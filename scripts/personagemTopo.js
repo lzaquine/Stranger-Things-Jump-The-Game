@@ -6,7 +6,7 @@ class Player2 {
     this.height = height;
 
     this.speedY = 0;
-    this.jumpForce = 12;
+    this.jumpForce = 13;
     this.grounded = false;
     this.jumpTimer = 0;
 
@@ -14,6 +14,15 @@ class Player2 {
     img.addEventListener("load", () => {});
     img.src = "./docs/assets/images/Small_Char_Top.png";
     this.img = img;
+
+    const backgroundImg = new Image();
+    backgroundImg.addEventListener("load", () => {});
+    backgroundImg.src = "../docs/assets/images/Background_2.gif";
+    this.backgroundImg = backgroundImg;
+  }
+
+  upsideDownBackground () {
+    ctx.drawImage(this.backgroundImg, this.x, this.y, cWidth, cHeight);
   }
 
   left() {
@@ -42,7 +51,7 @@ class Player2 {
   }
 
   animate() {
-    if (keys["KeyS"]) {
+    if (keys["KeyZ"]) {
       this.jump();
     } else {
       this.jumpTimer = 0;

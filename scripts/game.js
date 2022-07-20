@@ -24,11 +24,12 @@ function start() {
 };
 
 function startUpsideDown() {
-     interval = setInterval(update, 1000 / 60);
-     isRunning = true; 
-     gameSpeed = 15;
-     gravity = 0.9;
-     player = new Player2(125, 5, 50, 100);
+    interval = setInterval(update, 1000 / 60);
+    isRunning = true; 
+    gameSpeed = 15;
+    gravity = 0.9;
+    player = new Player2(125, 5, 50, 100);
+    backgroundImg = backgroundImg();
 };
 
 // Start ao contratio
@@ -83,6 +84,10 @@ function update() {
     gameSpeed += 0.005;
 
 };
+
+/* function myBk() {
+    document.body.style.backgroundImage = "url('../docs/assets/images/strangerT_gameStart.png')";
+}; */ // TA COM A IMG DE FUNDO APARECENDO QUANDO CLICO O BOTAO
 
 const startBtn = document.getElementById("start");
 const upsideDownBtn = document.getElementById("upside-down");
