@@ -52,7 +52,7 @@ function update() {
     spawnTimer--;
     if(spawnTimer <= 0) {
         spawnObstacle();
-        spawnObstacle2();
+        //spawnObstacle2();
         spawnTimer = initialSpawTimer - gameSpeed * 25;
 
         if (spawnTimer < 60) {
@@ -72,7 +72,7 @@ function update() {
                 obstacles = [];
                 clearInterval(interval);
                 isRunning = false;
-                spawnTimer = initialSpawTimer;
+                spawnTimer;
                 gameSpeed = 15;
         }
         // quando passa pelo x e do width do player, mas pertinho, ainda acaba o jogo com a posicao do demon mais pra tras
