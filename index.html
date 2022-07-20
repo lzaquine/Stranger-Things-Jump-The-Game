@@ -19,16 +19,58 @@
 
 <body>
 
+
+    <!-- TITLE SCREEN -->
+    <!-- <div id="title-screen">
+        <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Left" alt="demon image">
+        <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Right" alt="demon image">
+        <h1 id="game-title">Stranger Things</h1>
+        <h6 id="title-button">  Press to Start  </h6>
+        <h2 id="zToJump_Start">Press Z to Jump</h2> -->
+
+        <!-- START SCREEN-->
+
+        <!-- LEVEL SCREEN -->
+        <!-- <div id="levels" class="fade-out">
+            <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Left_Level" alt="demon image">
+            <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Right_Level" alt="demon image">
+            <p class="level_P">Pick your level</p>
+            <h6 id="btn-normal">Normal</h6>
+            <h6 id="btn-upsideDown">Upside Down</h6>
+            <h2 id="zToJump_Level">Press Z to Jump</h2>
+        </div>
+    </div> -->
+
+    <!-- GAME OVER SCREEN AND RESTART-->
+    <!-- <div id="game-over-screen">
+        <h1 id="game-over">Game Over</h1>
+        <h6 class="try-again-button">Die again?</h6>
+        <img src="/docs/assets/images/restart-button.png" class="restart-button" alt="restart button">
+    </div> -->
+
+
+
+    <!-- CANVAS -->
     <canvas id="canvas" width="730" height="552"></canvas>
 
-    <img src="./docs/assets/images/tv_1.jpeg" class="tv">
+    <!--BACKGROUND IMG-->
+    <img src="./docs/assets/images/tv_1.jpeg" class="bk_tv" alt="Background TV">
+
+
+
+    <!-- BUTTONS -->
     <button id="start" class="btn_start">Start Game</button>
-    <button id="upside-down" class="">Start Upside Down</button>
-    <script src="scripts/game.js"></script>
-    <script src="scripts/personagemTopo.js"></script>
-    <script src="scripts/demonTopo.js"></script>
-    <script src="scripts/demons.js"></script>
-    <script src="scripts/personagem.js"></script>
+    <button id="upside-down" onclick="myBk()"">Start Upside Down</button>  <!-- TA COM A IMG DE FUNDO APARECENDO QUANDO CLICO O BOTAO-->
+    
+
+
+    <!-- JS FILES-->
+    <script src=" scripts/game.js"></script>
+        <script src="scripts/personagemTopo.js"></script>
+        <script src="scripts/demonTopo.js"></script>
+        <script src="scripts/demons.js"></script>
+        <script src="scripts/personagem.js"></script>
+        <!-- <script src="scripts/engine.js"></script> -->
 
 </body>
 
