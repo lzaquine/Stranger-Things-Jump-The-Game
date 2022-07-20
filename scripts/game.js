@@ -1,5 +1,39 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+//screens
+const titleScreen = document.getElementById('title-screen');
+const levelsScreen = document.getElementById('levels');
+const gameOverScreen = document.getElementById('game-over-screen')
+const bgTVScreen = document.getElementById('bk-tv')
+const titleButton = document.getElementById('title-button');
+const restartButton = document.getElementById('restart-button');
+const normalButton = document.getElementById('btn-normal');
+const upsideDownButton = document.getElementById('btn-upsideDown');
+
+titleButton.onclick = () => {
+    titleScreen.classList.toggle('hidden')
+    levelsScreen.classList.toggle('hidden')
+}
+
+normalButton.onclick = () => {
+    levelsScreen.classList.toggle('hidden')
+    canvas.classList.toggle('hidden')
+    bgTVScreen.classList.toggle('hidden')
+    start()
+}
+upsideDownButton.onclick = () => {
+    levelsScreen.classList.toggle('hidden')
+    canvas.classList.toggle('hidden')
+    bgTVScreen.classList.toggle('hidden')
+
+
+    startUpsideDown()
+} 
+
+restartButton.onclick = () => {
+    gameOverScreen.classList.toggle('hidden')
+    titleScreen.classList.toggle('hidden')
+}
 
 const cWidth = canvas.width;
 const cHeight = canvas.height;
@@ -71,6 +105,10 @@ function update() {
           isRunning = false;
           spawnTimer;
           gameSpeed = 15;
+          canvas.classList.toggle('hidden')
+          gameOverScreen.classList.toggle('hidden')
+          bgTVScreen.classList.toggle('hidden')
+
         };
         // quando passa pelo x e do width do player, mas pertinho, ainda acaba o jogo com a posicao do demon mais pra tras
         
@@ -88,11 +126,11 @@ function update() {
 /* function myBk() {
     document.body.style.backgroundImage = "url('../docs/assets/images/strangerT_gameStart.png')";
 }; */ // TA COM A IMG DE FUNDO APARECENDO QUANDO CLICO O BOTAO
-
+/* 
 const startBtn = document.getElementById("start");
 const upsideDownBtn = document.getElementById("upside-down");
 startBtn.addEventListener("click", start);
-upsideDownBtn.addEventListener("click", startUpsideDown);
+upsideDownBtn.addEventListener("click", startUpsideDown); */
 
 
 

@@ -21,17 +21,18 @@
 
 
     <!-- TITLE SCREEN -->
-    <!-- <div id="title-screen">
+     <div id="title-screen">
         <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Left" alt="demon image">
         <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Right" alt="demon image">
         <h1 id="game-title">Stranger Things</h1>
         <h6 id="title-button">  Press to Start  </h6>
-        <h2 id="zToJump_Start">Press Z to Jump</h2> -->
+        <h2 id="zToJump_Start">Press Z to Jump</h2> 
+    </div>
 
         <!-- START SCREEN-->
 
         <!-- LEVEL SCREEN -->
-        <!-- <div id="levels" class="fade-out">
+        <div id="levels" class="fade-out hidden">
             <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Left_Level" alt="demon image">
             <img src="./docs/assets/images/smalldemon-removebg-preview.png" class="demon_Right_Level" alt="demon image">
             <p class="level_P">Pick your level</p>
@@ -39,28 +40,26 @@
             <h6 id="btn-upsideDown">Upside Down</h6>
             <h2 id="zToJump_Level">Press Z to Jump</h2>
         </div>
-    </div> -->
 
     <!-- GAME OVER SCREEN AND RESTART-->
-    <!-- <div id="game-over-screen">
+     <div id="game-over-screen" class="hidden">
         <h1 id="game-over">Game Over</h1>
         <h6 class="try-again-button">Die again?</h6>
-        <img src="/docs/assets/images/restart-button.png" class="restart-button" alt="restart button">
-    </div> -->
+        <img src="/docs/assets/images/restart-button.png" id="restart-button" alt="restart button">
+    </div> 
 
-
+    <!-- <canvas id="canvas2" width="178" height="85"></canvas> -->
 
     <!-- CANVAS -->
-    <canvas id="canvas" width="730" height="552"></canvas>
+    <canvas id="canvas" width="730" height="552" class="hidden"></canvas>
 
     <!--BACKGROUND IMG-->
-    <img src="./docs/assets/images/tv_1.jpeg" class="bk_tv" alt="Background TV">
+    <img src="./docs/assets/images/tv_1.jpeg" id="bk-tv" class="bk_tv hidden" alt="Background TV">
 
 
 
     <!-- BUTTONS -->
-    <button id="start" class="btn_start">Start Game</button>
-    <button id="upside-down">Start Upside Down</button>  <!-- TA COM A IMG DE FUNDO APARECENDO QUANDO CLICO O BOTAO-->
+   
     
 
 
