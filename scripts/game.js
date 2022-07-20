@@ -29,7 +29,7 @@ function startUpsideDown() {
     gameSpeed = 15;
     gravity = 0.9;
     player = new Player2(125, 5, 50, 100);
-    backgroundImg = backgroundImg();
+    /* backgroundImg = backgroundImg(); */
 };
 
 // Start ao contratio

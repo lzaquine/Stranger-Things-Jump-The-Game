@@ -18,13 +18,13 @@
     align-items: center;
 } */
 
-#title-screen {
+/* z-index: 4; ? */
+/* #title-screen {
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    /* z-index: 4; */
     background-image: black;
     display: flex;
     flex-direction: column;
@@ -109,20 +109,20 @@
     width: 50px;
     bottom: 35%;
     right: 50%;
-}
+} */
 /* ANIMACOES */
 /* START PAGE UP */
 
-/*  */
-#game-over-screen {
+
+/* DIFERENCA ENTRE POSITION FIXED E ABSOLUTE? */ 
+/* POSSO USAR O Z-INDEX COM O CANVAS PRA TER A STARTSCREEN E GAME OVER "DENTRO" DA TV/CANVAS?*/
+/* z-index: 4; */
+/* #game-over-screen {
     position: absolute;
-    /* DIFERENCA ENTRE POSITION FIXED E ABSOLUTE? */ 
-    /* POSSO USAR O Z-INDEX COM O CANVAS PRA TER A STARTSCREEN E GAME OVER "DENTRO" DA TV/CANVAS?*/
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    /* z-index: 4; */
     background-image: black;
     display: flex;
     flex-direction: column;
@@ -143,7 +143,7 @@
     position: absolute;
     top: 50%;
     width: 50px;
-}
+} */
 
 
 

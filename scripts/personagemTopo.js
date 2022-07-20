@@ -15,15 +15,15 @@ class Player2 {
     img.src = "./docs/assets/images/Small_Char_Top.png";
     this.img = img;
 
-    const backgroundImg = new Image();
+    /* const backgroundImg = new Image();
     backgroundImg.addEventListener("load", () => {});
     backgroundImg.src = "../docs/assets/images/Background_2.gif";
-    this.backgroundImg = backgroundImg;
+    this.backgroundImg = backgroundImg; */
   }
 
-  upsideDownBackground () {
+  /* upsideDownBackground () {
     ctx.drawImage(this.backgroundImg, this.x, this.y, cWidth, cHeight);
-  }
+  } */
 
   left() {
     return this.x;
