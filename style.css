@@ -1,8 +1,14 @@
+@font-face {
+    font-family: Benguiat Bold;
+    src: url('.docs/assets/fonts/Benguiat Bold.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: black;
+    font-family: Benguiat Bold;
 }
 
 #canvas {
@@ -34,7 +40,7 @@
     /* transform: skew(3deg); */
     background-color: black;
     border-radius: 10px;
-    font-size: 12px;   
+    font-size: 20px;   
     color: white;
     border: none;
 }
@@ -48,7 +54,7 @@
     /* transform: skew(3deg); */
     background-color: black;
     border-radius: 10px;
-    font-size: 12px;   
+    font-size: 20px;   
     color: white;
     border: none;
 }
