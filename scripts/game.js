@@ -56,14 +56,20 @@ function update() {
             obstacles.splice(i, 1);
         };
 
-        if (player.x + player.width > demon.x &&
-            !(demon.x + demon.width < player.x) &&
-            player.y + player.height > demon.y) {
-                obstacles = [];
-                clearInterval(interval);
-                isRunning = false;
-                spawnTimer;
-                gameSpeed = 15;
+   /*      colision(enemy) {
+    return !(
+      this.bottom() < enemy.top() ||
+      this.top() > enemy.bottom() ||
+      this.right() < enemy.left() ||
+      this.left() > enemy.right()
+    );
+  } */
+        if (player.colision(demon)) {
+          obstacles = [];
+          clearInterval(interval);
+          isRunning = false;
+          spawnTimer;
+          gameSpeed = 15;
         };
         // quando passa pelo x e do width do player, mas pertinho, ainda acaba o jogo com a posicao do demon mais pra tras
         
