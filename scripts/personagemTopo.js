@@ -13,16 +13,16 @@ class Player2 {
 
         const img = new Image();
         img.addEventListener('load', () => {});
-        img.src = '../docs/assets/images/Small_Char_Top.png'
+        img.src = '../docs/assets/images/Small_Char_Top.png';
         this.img = img;
-    }
+    };
 
     animate() {
         if (keys['KeyS']) {
             this.jump();
         } else {
             this.jumpTimer = 0;
-        } 
+        };
 
         this.y += this.speedY;
 
@@ -33,11 +33,10 @@ class Player2 {
             this.speedY = 0;
             this.grounded = false;
             this.y = 0 ;
-        }
+        };
 
-        /* this.draw(); */
         this.playerDraw();
-    }
+    };
 
     jump() {
         if (this.grounded && this.jumpTimer === 0) {
@@ -46,16 +45,10 @@ class Player2 {
         } else if (this.jumpTimer < 0 && this.jumpTimer > 10) {
             this.jumpTimer++;
             this.speedY = this.jumpForce - (this.jumpTimer / 50);
-        }
-    }
+        };
+    };
 
-    /* draw() {
-        ctx.beginPath();
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.closePath();
-    } */
     playerDraw() {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
-    }
-}
+    };
+};

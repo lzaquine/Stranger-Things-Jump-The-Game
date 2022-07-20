@@ -10,48 +10,28 @@ class Obstacle {
 
         const img2 = new Image();
         img2.addEventListener('load', () => {});
-        img2.src = '../docs/assets/images/smalldemon-removebg-preview.png'
+        img2.src = '../docs/assets/images/smalldemon-removebg-preview.png';
         this.img2 = img2;
-    }
+    };
 
     update() {
         this.x += this.speedX;
         this.demonDraw();
         this.speedX = -gameSpeed;
-    }
-
-    /* draw() {
-        ctx.beginPath();
-        ctx.fillStyle = this.color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.closePath();
-    } */
+    };
 
     demonDraw() {
         ctx.drawImage(this.img2, this.x, this.y, this.width, this.height);
-    }
-} 
+    };
+};
 
 function spawnObstacle() {
     let size = demonSize(65, 65);
     let obstacle = new Obstacle(cWidth + size, cHeight - size, size, size);
-
     
     obstacles.push(obstacle);
-}
+};
 
 function demonSize(min, max){
-    return Math.round(Math.random() * (max-min) + min)
-}
-
-
-// game = start
-//start new game
-/* let newGame = document.querySelector('.btn_start');
-newGame.addEventListener('click', function(){
-    if(!isRunning) {
-        reset();
-    } else if (isRunning) {
-        start();
-    }
-}); */
+    return Math.round(Math.random() * (max-min) + min);
+};

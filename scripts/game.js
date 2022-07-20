@@ -30,18 +30,9 @@ function startUpsideDown() {
      gameSpeed = 15;
      gravity = 0.9;
      player2 = new Player2(125, 5, 50, 100);
-}
+};
 
 // Start ao contratio
-
-/* function reset() {
-    clearInterval(interval);
-    player.x = x;
-    player.y = y;
-    obstacles = [];
-    spawnTimer = initialSpawTimer;
-    gameSpeed = 15;
-} */
 
 let initialSpawTimer = 100;
 let spawnTimer = initialSpawTimer;
@@ -57,14 +48,14 @@ function update() {
 
         if (spawnTimer < 60) {
             spawnTimer = 60;
-        }
-    }
+        };
+    };
 
     for (let i = 0; i < obstacles.length; i++) {
         let demon = obstacles[i];
         if (demon.x + demon.width < 0) {
             obstacles.splice(i, 1);
-        }
+        };
 
         if (player.x + player.width > demon.x &&
             !(demon.x + demon.width < player.x) &&
@@ -74,12 +65,12 @@ function update() {
                 isRunning = false;
                 spawnTimer;
                 gameSpeed = 15;
-        }
+        };
         // quando passa pelo x e do width do player, mas pertinho, ainda acaba o jogo com a posicao do demon mais pra tras
         
 
         demon.update();
-    }
+    };
 
     player.animate();
     player2.animate();
@@ -89,12 +80,12 @@ function update() {
 };
 
 const startBtn = document.getElementById("start");
-const upsideDownBtn = document.getElementById("upside-down")
-startBtn.addEventListener("click", start)
-upsideDownBtn.addEventListener("click", startUpsideDown)
+const upsideDownBtn = document.getElementById("upside-down");
+startBtn.addEventListener("click", start);
+upsideDownBtn.addEventListener("click", startUpsideDown);
 
 
-//
+
 
 // classe e funcao diferenca
 
