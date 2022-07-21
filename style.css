@@ -23,12 +23,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-image: url('./docs/assets/images/tv_nobg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hidden {
   visibility: hidden;
 }
 #title-screen {
+  background-image: url('./docs/assets/images/tv_nobg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   right: 0;
@@ -40,56 +45,55 @@ body {
   align-items: center;
 }
 #game-title {
+  top: 21%;
+  right: 45%;
   position: absolute;
-  top: 8%;
-  font-size: 90px;
-  flex-wrap: wrap;
-}
-#sub-title {
-    position: absolute;
-    top: 25%;
-    font-size: 50px;
+  width: 320px;
 }
 #jump {
     position: absolute;
-    font-size: 42px;
-    top: 35%;
+    font-size: 35px;
+    top: 40%;
+    right: 51%;
 }
 #title-button {
   position: absolute;
-  top: 55%;
+  top: 52%;
+  right: 46%;
   font-size: 28px;
   flex-wrap: wrap;
-  border: 2px solid red;
+  border: 4px solid red;
+  border-radius: 50px;
   padding: 10px;
 }
 .demon_Left {
   position: absolute;
-  right: 85%;
-  bottom: 85%;
+  right: 65%;
+  bottom: 41.5%;
   width: 75px;
 }
 .demon_Right {
   position: absolute;
-  left: 85%;
-  bottom: 85%;
+  left: 54.5%;
+  bottom: 41%;
   width: 75px;
 }
 #zToJump_Start {
   position: absolute;
-  font-size: 16px;
-  top: 85%;
+  font-size: 14px;
+  top: 73%;
+  right: 50.5%
 }
 .level_P {
   position: absolute;
   font-size: 38px;
-  top: 20%;
-  right: 39%;
+  top: 25%;
+  right: 44%;
 }
 #btn-normal {
   position: absolute;
   top: 50%;
-  left: 33%;
+  left: 30%;
   font-size: 24px;
   flex-wrap: wrap;
   border: 2px solid red;
@@ -98,7 +102,7 @@ body {
 #btn-upsideDown {
   position: absolute;
   top: 50%;
-  right: 32%;
+  right: 39%;
   font-size: 24px;
   flex-wrap: wrap;
   border: 2px solid red;
@@ -107,13 +111,13 @@ body {
 }
 #zToJump_Level {
     position: absolute;
-    font-size: 16px;
-    top: 85%;
-    left: 44%
+    font-size: 14px;
+    top: 73%;
+    right: 50.5%
 }
 .demon_Left_Level {
   position: absolute;
-  left: 35.5%;
+  left: 33%;
   bottom: 50%;
   width: 50px;
 }
@@ -122,9 +126,12 @@ body {
   position: absolute;
   width: 50px;
   bottom: 37%;
-  right: 38%;
+  right: 45%;
 }
 #game-over-screen {
+  background-image: url('./docs/assets/images/tv_nobg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   top: 0;
   right: 0;
@@ -138,17 +145,20 @@ body {
 #game-over {
   font-size: 62px;
   position: absolute;
-  top: 25%;
+  top: 26%;
+  right: 41%;
 }
 .try-again-button {
   position: absolute;
-  font-size: 18px;
-  top: 44%;
+  font-size: 22px;
+  top: 46%;
+  right: 50.5%
 }
 #restart-button {
   position: absolute;
-  top: 50%;
-  width: 50px;
+  top: 52%;
+  right: 54%;
+  width: 58px;
 }
 #canvas {
   border: 1px solid black;
