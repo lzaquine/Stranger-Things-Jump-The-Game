@@ -48,7 +48,7 @@
 </table>
 <br>
 <h3><strong>References:</strong></h3>
-<ul><a target="_blank" rel="noopener noreferrer" href="chrome://dino/"><li>Chrome Dino</li></a>
+<ul><a target="_blank" rel="noopener noreferrer" href="https://chromedino.com"><li>Chrome Dino</li></a>
 <a target="_blank" rel="noopener noreferrer" href="https://www.netflix.com/title/80057281"><li>Stranger Things</li></a></ul>
 </a>
 <a target="_blank" rel="noopener noreferrer" href="https://www.ironhack.com/"><img src="./docs/assets/images/ironhack-1.svg" width="80px" style="max-width: 100%; padding-left: 35px;"></a>
