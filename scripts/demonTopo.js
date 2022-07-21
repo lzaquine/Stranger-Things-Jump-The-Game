@@ -9,7 +9,7 @@ class Obstacle2 {
 
     const img2 = new Image();
     img2.addEventListener("load", () => {});
-    img2.src = "./docs/assets/images/smalldemon_top.png"; // nao ta trocando a img, ela continua como a mesma 'normal'
+    img2.src = "./docs/assets/images/smalldemon_top.png";
     this.img2 = img2;
   }
 
@@ -39,5 +39,3 @@ class Obstacle2 {
     ctx.drawImage(this.img2, this.x, this.y, 65, 65);
   }
 };
-
-// nao preciso me preocupar com a colisao do demontopo e do personagem1 pq eles nao vao estar no mesmo modo?

@@ -14,17 +14,7 @@ class Player2 {
     img.addEventListener("load", () => {});
     img.src = "./docs/assets/images/Small_Char_Top.png";
     this.img = img;
-
-    /* const backgroundImg = new Image();
-    backgroundImg.addEventListener("load", () => {});
-    backgroundImg.src = "../docs/assets/images/Background_2.gif";
-    this.backgroundImg = backgroundImg; */
   }
-
-  /* upsideDownBackground () {
-    ctx.drawImage(this.backgroundImg, this.x, this.y, cWidth, cHeight);
-  } */
-
   left() {
     return this.x;
   }

@@ -58,8 +58,6 @@ class Player {
       this.grounded = true;
       this.y = cHeight - this.height;
     }
-
-    /* this.draw(); */
     this.playerDraw();
   }
 
