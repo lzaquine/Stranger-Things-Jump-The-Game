@@ -93,10 +93,11 @@ body {
 #btn-normal {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 29%;
   font-size: 24px;
   flex-wrap: wrap;
-  border: 2px solid red;
+  border: 4px solid red;
+  border-radius: 50px;
   padding: 10px;
 }
 #btn-upsideDown {
@@ -105,9 +106,10 @@ body {
   right: 39%;
   font-size: 24px;
   flex-wrap: wrap;
-  border: 2px solid red;
+  border: 4px solid red;
   padding: 10px;
   transform: rotate(180deg);
+  border-radius: 50px;
 }
 #zToJump_Level {
     position: absolute;
@@ -117,15 +119,15 @@ body {
 }
 .demon_Left_Level {
   position: absolute;
-  left: 33%;
-  bottom: 50%;
+  left: 32.8%;
+  bottom: 49.9%;
   width: 50px;
 }
 .demon_Right_Level {
   transform: rotate(180deg);
   position: absolute;
   width: 50px;
-  bottom: 37%;
+  bottom: 36.6%;
   right: 45%;
 }
 #game-over-screen {
@@ -158,7 +160,8 @@ body {
   position: absolute;
   top: 52%;
   right: 54%;
-  width: 58px;
+  width: 60px;
+  border-radius: 10px;
 }
 #canvas {
   border: 1px solid black;
@@ -216,4 +219,3 @@ body {
     opacity: 55%;
     transform: skew(3deg);
 } */
-/* colocar o score, highscore em cima do botao start? teria como fazer outro canvas ou poderia criar no html/css e como rodar ali? */

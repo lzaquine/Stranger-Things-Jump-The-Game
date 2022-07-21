@@ -69,7 +69,7 @@ class Player {
       this.jumpTimer++;
       this.speedY = -this.jumpForce - this.jumpTimer / 50;
     };
-    this.jumpSound.play();
+    this.jumpSound();
   };
 
   playerDraw() {
@@ -85,5 +85,3 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('keyup', (e) => {
     keys[e.code] = false;
 });
-
-
