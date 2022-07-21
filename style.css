@@ -3,7 +3,6 @@
     20%, 60% { transform: rotate(-25deg) }
     40%, 80% { transform: rotate(10deg) }
 }
-
 .github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
 }
@@ -174,7 +173,6 @@ body {
   background-size: cover;
   border-radius: 10px;
 }
-
 .first-background{
   background-image: url("./docs/assets/images/pixelart.jpg");
 }
@@ -183,30 +181,6 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
-}
-.btn_start {
-  position: absolute;
-  width: 12vw;
-  height: 6vh;
-  top: 93%;
-  right: 67%;
-
-  border-radius: 10px;
-  font-size: 20px;
-  color: red;
-  border: none;
-}
-#upside-down {
-  position: absolute;
-  width: 12vw;
-  height: 6vh;
-  top: 93%;
-  right: 31.5%;
-
-  border-radius: 10px;
-  font-size: 18px;
-  border: none;
-  color: red;
 }
 .second-background {
   background-image: url("./docs/assets/images/Background_2.gif");
