@@ -8,7 +8,6 @@ class Player2 {
     this.jumpForce = 13;
     this.grounded = false;
     this.jumpTimer = 0;
-    this.jumpSound2 = new Audio('./docs/assets/sounds/jump-sound.mp3');
 
     const img = new Image();
     img.addEventListener("load", () => {});
@@ -70,7 +69,6 @@ class Player2 {
       this.jumpTimer++;
       this.speedY = -this.jumpForce - this.jumpTimer / 50;
     };
-    this.jumpSound2.play();
   };
 
   playerDraw() {
