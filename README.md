@@ -1,5 +1,5 @@
 <p align="center" dir="auto">
-<a target="_blank" rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/">
+<a rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/" target="_blank">
 <img src="./docs/assets/images/demogorgon.png" width="110" style="max-width: 100%;"> </a> </p>
 <h1 align="center" dir="auto"><strong>Stranger Things<br>Jump!</strong></h1>
 <h2 align="center" dir="auto">A game based in the hidden Google Chrome Dinosaur Game and the TV show Stranger Things.</h2>
@@ -24,11 +24,11 @@
 <br>
 <br>
 <h1 align="center" dir="auto">
-<a target="_blank" rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/"><strong>PLAY NOW!</strong></a></h1>
+<a rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/" target="_blank"><strong>PLAY NOW!</strong></a></h1>
 <br>
 <br>
 <p>
-<a target="_blank" rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/">
+<a rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/" target="_blank">
 <img src="./docs/assets/images/Start_Screen_ST_Game.png" style="max-width: 100%;"> </a></p>
 <br>
 <h3><strong>Input:</strong></h3>
@@ -48,7 +48,7 @@
 </table>
 <br>
 <h3><strong>References:</strong></h3>
-<ul><a target="_blank" rel="noopener noreferrer" href="https://chromedino.com"><li>Chrome Dino</li></a>
-<a target="_blank" rel="noopener noreferrer" href="https://www.netflix.com/title/80057281"><li>Stranger Things</li></a></ul>
+<ul><a rel="noopener noreferrer" href="https://chromedino.com" target="_blank"><li>Chrome Dino</li></a>
+<a rel="noopener noreferrer" href="https://www.netflix.com/title/80057281" target="_blank"><li>Stranger Things</li></a></ul>
 </a>
-<a target="_blank" rel="noopener noreferrer" href="https://www.ironhack.com/"><img src="./docs/assets/images/ironhack-1.svg" width="80px" style="max-width: 100%; padding-left: 35px;"></a>
+<a rel="noopener noreferrer" href="https://www.ironhack.com/" target="_blank"><img src="./docs/assets/images/ironhack-1.svg" width="80px" style="max-width: 100%; padding-left: 35px;"></a>
