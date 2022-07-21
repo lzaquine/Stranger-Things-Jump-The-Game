@@ -105,5 +105,5 @@ function update() {
     gameSpeed += 0.010;
 };
 
-let song = new Audio('./docs/assets/sounds/Stranger_Things_8Bit_Sound.mp3');
+let song = new Audio('./docs/assets/sounds/som_1.mp3');
 song.loop = true;
