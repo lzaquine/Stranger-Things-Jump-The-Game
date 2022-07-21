@@ -15,6 +15,7 @@ class Player2 {
     img.src = "./docs/assets/images/Small_Char_Top.png";
     this.img = img;
   }
+  
   left() {
     return this.x;
   }

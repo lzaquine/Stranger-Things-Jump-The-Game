@@ -47,8 +47,7 @@ function spawnObstacle() {
         obstacle = new Obstacle2(700, 0, size, size);
     } else {
         obstacle = new Obstacle(730 + size, 552 - size, size, size);
-    }
-    
+    } 
     obstacles.push(obstacle);
 };
 
