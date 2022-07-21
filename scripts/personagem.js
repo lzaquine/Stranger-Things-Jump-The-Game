@@ -4,7 +4,6 @@ class Player {
     this.y = y;
     this.width = width;
     this.height = height;
-
     this.speedY = 0;
     this.jumpForce = 9;
     this.grounded = false;
@@ -14,23 +13,23 @@ class Player {
     img.addEventListener("load", () => {});
     img.src = "./docs/assets/images/Small_Char.png";
     this.img = img;
-  }
+  };
 
   left() {
     return this.x;
-  }
+  };
 
   right() {
     return this.x + this.width;
-  }
+  };
 
   top() {
     return this.y;
-  }
+  };
 
   bottom() {
     return this.y + this.height;
-  }
+  };
 
   colision(enemy) {
     return !(
@@ -39,14 +38,14 @@ class Player {
       this.right() < enemy.left() ||
       this.left() > enemy.right()
     );
-  }
+  };
 
   animate() {
     if (keys["KeyZ"]) {
       this.jump();
     } else {
       this.jumpTimer = 0;
-    }
+    };
 
     this.y += this.speedY;
 
@@ -59,7 +58,7 @@ class Player {
       this.y = cHeight - this.height;
     }
     this.playerDraw();
-  }
+  };
 
   jump() {
     if (this.grounded && this.jumpTimer === 0) {
@@ -68,18 +67,19 @@ class Player {
     } else if (this.jumpTimer > 0 && this.jumpTimer < 10) {
       this.jumpTimer++;
       this.speedY = -this.jumpForce - this.jumpTimer / 50;
-    }
-  }
+    };
+  };
 
   playerDraw() {
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
-  }
+  };
 };
 
 document.addEventListener('keydown', (e) => {
     keys[e.code] = true;
     
 });
+
 document.addEventListener('keyup', (e) => {
     keys[e.code] = false;
 });

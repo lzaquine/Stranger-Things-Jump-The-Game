@@ -1,11 +1,10 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-//screens
 const titleScreen = document.getElementById('title-screen');
 const levelsScreen = document.getElementById('levels');
-const gameOverScreen = document.getElementById('game-over-screen')
-const bgTVScreen = document.getElementById('bk-tv')
+const gameOverScreen = document.getElementById('game-over-screen');
+const bgTVScreen = document.getElementById('bk-tv');
 const titleButton = document.getElementById('title-button');
 const restartButton = document.getElementById('restart-button');
 const normalButton = document.getElementById('btn-normal');
@@ -13,29 +12,29 @@ const upsideDownButton = document.getElementById('btn-upsideDown');
 
 titleButton.onclick = () => {
     song.play();
-    titleScreen.classList.toggle('hidden')
-    levelsScreen.classList.toggle('hidden')
-}
+    titleScreen.classList.toggle('hidden');
+    levelsScreen.classList.toggle('hidden');
+};
 
 normalButton.onclick = () => {
-    levelsScreen.classList.toggle('hidden')
-    canvas.classList.toggle('hidden')
-    canvas.classList.toggle('first-background')
-    bgTVScreen.classList.toggle('hidden')
-    start()
-}
+    levelsScreen.classList.toggle('hidden');
+    canvas.classList.toggle('hidden');
+    canvas.classList.toggle('first-background');
+    bgTVScreen.classList.toggle('hidden');
+    start();
+};
 upsideDownButton.onclick = () => {
-    levelsScreen.classList.toggle('hidden')
-    canvas.classList.toggle('hidden')
-    canvas.classList.toggle('second-background')
-    bgTVScreen.classList.toggle('hidden')
-    startUpsideDown()
-} 
+    levelsScreen.classList.toggle('hidden');
+    canvas.classList.toggle('hidden');
+    canvas.classList.toggle('second-background');
+    bgTVScreen.classList.toggle('hidden');
+    startUpsideDown();
+};
 
 restartButton.onclick = () => {
-    gameOverScreen.classList.toggle('hidden')
-    titleScreen.classList.toggle('hidden')
-}
+    gameOverScreen.classList.toggle('hidden');
+    titleScreen.classList.toggle('hidden');
+};
 
 const cWidth = canvas.width;
 const cHeight = canvas.height;
@@ -47,7 +46,6 @@ let gameSpeed;
 let keys = {};
 let interval = null;
 let isRunning = false;
-let frames = 0;
 
 function start() {
     interval = setInterval(update, 1000 / 60);
@@ -65,7 +63,7 @@ function startUpsideDown() {
     player = new Player2(125, 5, 50, 100);
 };
 
-let initialSpawTimer = 200;
+let initialSpawTimer = 180;
 let spawnTimer = initialSpawTimer;
 
 function update() {
@@ -98,20 +96,14 @@ function update() {
           canvas.classList.remove('second-background')
           gameOverScreen.classList.toggle('hidden')
           bgTVScreen.classList.toggle('hidden')
-
         };
-        
+
         demon.update();
     };
 
     player.animate();
-
     gameSpeed += 0.010;
-
 };
 
 let song = new Audio('./docs/assets/sounds/Stranger_Things_8Bit_Sound.mp3');
 song.loop = true;
-
-
-// bonus-> criar uma outra classe de demons, so que puxando aquela mesma e usar mais um loop pra criar os demons
