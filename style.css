@@ -32,13 +32,23 @@ body {
 }
 #game-title {
   position: absolute;
-  top: 175px;
+  top: 8%;
   font-size: 90px;
   flex-wrap: wrap;
 }
+#sub-title {
+    position: absolute;
+    top: 25%;
+    font-size: 50px;
+}
+#jump {
+    position: absolute;
+    font-size: 42px;
+    top: 35%;
+}
 #title-button {
   position: absolute;
-  top: 475px;
+  top: 55%;
   font-size: 28px;
   flex-wrap: wrap;
   border: 2px solid red;
@@ -46,15 +56,15 @@ body {
 }
 .demon_Left {
   position: absolute;
-  right: 75%;
-  bottom: 75%;
-  width: 140px;
+  right: 85%;
+  bottom: 85%;
+  width: 75px;
 }
 .demon_Right {
   position: absolute;
-  left: 75%;
-  bottom: 75%;
-  width: 140px;
+  left: 85%;
+  bottom: 85%;
+  width: 75px;
 }
 #zToJump_Start {
   position: absolute;
@@ -63,14 +73,14 @@ body {
 }
 .level_P {
   position: absolute;
-  font-size: 48px;
-  top: 16%;
+  font-size: 38px;
+  top: 20%;
   right: 39%;
 }
 #btn-normal {
   position: absolute;
-  top: 36%;
-  left: 45%;
+  top: 50%;
+  left: 33%;
   font-size: 24px;
   flex-wrap: wrap;
   border: 2px solid red;
@@ -78,8 +88,8 @@ body {
 }
 #btn-upsideDown {
   position: absolute;
-  top: 54%;
-  left: 42.5%;
+  top: 50%;
+  right: 32%;
   font-size: 24px;
   flex-wrap: wrap;
   border: 2px solid red;
@@ -87,23 +97,23 @@ body {
   transform: rotate(180deg);
 }
 #zToJump_Level {
-  position: absolute;
-  font-size: 16px;
-  top: 82%;
-  right: 47%;
+    position: absolute;
+    font-size: 16px;
+    top: 85%;
+    left: 44%
 }
 .demon_Left_Level {
   position: absolute;
-  right: 50%;
-  bottom: 65%;
+  left: 35.5%;
+  bottom: 50%;
   width: 50px;
 }
 .demon_Right_Level {
   transform: rotate(180deg);
   position: absolute;
   width: 50px;
-  bottom: 35%;
-  right: 50%;
+  bottom: 37%;
+  right: 38%;
 }
 #game-over-screen {
   position: absolute;
@@ -189,3 +199,14 @@ body {
     transform: skew(3deg);
 } */
 /* colocar o score, highscore em cima do botao start? teria como fazer outro canvas ou poderia criar no html/css e como rodar ali? */
+
+
+/* @keyframes octocat-wave {
+    0%, 100% { transform: rotate(0) }
+    20%, 60% { transform: rotate(-25deg) }
+    40%, 80% { transform: rotate(10deg) }
+  }
+
+  .github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  } */
