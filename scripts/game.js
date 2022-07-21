@@ -1,5 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+
 //screens
 const titleScreen = document.getElementById('title-screen');
 const levelsScreen = document.getElementById('levels');
@@ -18,14 +19,16 @@ titleButton.onclick = () => {
 normalButton.onclick = () => {
     levelsScreen.classList.toggle('hidden')
     canvas.classList.toggle('hidden')
+    canvas.classList.toggle('first-background')
     bgTVScreen.classList.toggle('hidden')
     start()
 }
 upsideDownButton.onclick = () => {
     levelsScreen.classList.toggle('hidden')
     canvas.classList.toggle('hidden')
+    canvas.classList.toggle('second-background')
     bgTVScreen.classList.toggle('hidden')
-
+    /* backgroundImg = backgroundImg(); */
 
     startUpsideDown()
 } 
@@ -58,17 +61,15 @@ function start() {
 };
 
 function startUpsideDown() {
+    
     interval = setInterval(update, 1000 / 60);
     isRunning = true; 
     gameSpeed = 15;
     gravity = 0.9;
     player = new Player2(125, 5, 50, 100);
-    /* backgroundImg = backgroundImg(); */
 };
 
-// Start ao contratio
-
-let initialSpawTimer = 100;
+let initialSpawTimer =200;
 let spawnTimer = initialSpawTimer;
 
 function update() {
@@ -77,13 +78,13 @@ function update() {
     spawnTimer--;
     if(spawnTimer <= 0) {
        spawnObstacle();
-        //spawnObstacle2();
-        spawnTimer = initialSpawTimer - gameSpeed * 25;
+        spawnTimer = initialSpawTimer - gameSpeed * 5500;
 
         if (spawnTimer < 60) {
             spawnTimer = 60;
         };
     };
+
 
     for (let i = 0; i < obstacles.length; i++) {
         let demon = obstacles[i];
@@ -91,14 +92,6 @@ function update() {
             obstacles.splice(i, 1);
         };
 
-   /*      colision(enemy) {
-    return !(
-      this.bottom() < enemy.top() ||
-      this.top() > enemy.bottom() ||
-      this.right() < enemy.left() ||
-      this.left() > enemy.right()
-    );
-  } */
         if (player.colision(demon)) {
           obstacles = [];
           clearInterval(interval);
@@ -106,6 +99,8 @@ function update() {
           spawnTimer;
           gameSpeed = 15;
           canvas.classList.toggle('hidden')
+          canvas.classList.remove('first-background')
+          canvas.classList.remove('second-background')
           gameOverScreen.classList.toggle('hidden')
           bgTVScreen.classList.toggle('hidden')
 
@@ -117,31 +112,10 @@ function update() {
     };
 
     player.animate();
-    /* player2.animate(); */
 
     gameSpeed += 0.005;
 
 };
 
-/* function myBk() {
-    document.body.style.backgroundImage = "url('../docs/assets/images/strangerT_gameStart.png')";
-}; */ // TA COM A IMG DE FUNDO APARECENDO QUANDO CLICO O BOTAO
-/* 
-const startBtn = document.getElementById("start");
-const upsideDownBtn = document.getElementById("upside-down");
-startBtn.addEventListener("click", start);
-upsideDownBtn.addEventListener("click", startUpsideDown); */
-
-
-
-
-// classe e funcao diferenca
-
-
-// criar funcao reset com tudo 0 pra colocar dentro do start ou stop dai aperto o botao e vai
-
-//cortar as imgs
-// background image como fazer a troca delas com js ou css?
-// jogo ta mt rapido quando clico no botao mais de 1x
 
 // bonus-> criar uma outra classe de demons, so que puxando aquela mesma e usar mais um loop pra criar os demons
