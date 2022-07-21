@@ -42,7 +42,7 @@
 <tbody style="border: 2px solid grey;">
 <tr style="border: 2px solid grey;">
 <td style="border: 2px solid grey;"><strong><code>Z</code></strong></td>
-<td style="border: 2px solid grey;">Press <code><strong>Z</strong></code> to jump and avoid the demogorgons.</td>
+<td style="border: 2px solid grey;">Jump and avoid the demogorgons.</td>
 </tr>
 </tbody>
 </table>
