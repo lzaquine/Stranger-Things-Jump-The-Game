@@ -12,6 +12,7 @@ const normalButton = document.getElementById('btn-normal');
 const upsideDownButton = document.getElementById('btn-upsideDown');
 
 titleButton.onclick = () => {
+    song.play();
     titleScreen.classList.toggle('hidden')
     levelsScreen.classList.toggle('hidden')
 }
@@ -28,8 +29,6 @@ upsideDownButton.onclick = () => {
     canvas.classList.toggle('hidden')
     canvas.classList.toggle('second-background')
     bgTVScreen.classList.toggle('hidden')
-    /* backgroundImg = backgroundImg(); */
-
     startUpsideDown()
 } 
 
@@ -41,7 +40,6 @@ restartButton.onclick = () => {
 const cWidth = canvas.width;
 const cHeight = canvas.height;
     
-
 let player;
 let gravity;
 let obstacles = [];
@@ -50,7 +48,6 @@ let keys = {};
 let interval = null;
 let isRunning = false;
 let frames = 0;
-
 
 function start() {
     interval = setInterval(update, 1000 / 60);
@@ -61,7 +58,6 @@ function start() {
 };
 
 function startUpsideDown() {
-    
     interval = setInterval(update, 1000 / 60);
     isRunning = true; 
     gameSpeed = 15;
@@ -69,7 +65,7 @@ function startUpsideDown() {
     player = new Player2(125, 5, 50, 100);
 };
 
-let initialSpawTimer =200;
+let initialSpawTimer = 200;
 let spawnTimer = initialSpawTimer;
 
 function update() {
@@ -84,7 +80,6 @@ function update() {
             spawnTimer = 60;
         };
     };
-
 
     for (let i = 0; i < obstacles.length; i++) {
         let demon = obstacles[i];
@@ -105,17 +100,18 @@ function update() {
           bgTVScreen.classList.toggle('hidden')
 
         };
-        // quando passa pelo x e do width do player, mas pertinho, ainda acaba o jogo com a posicao do demon mais pra tras
         
-
         demon.update();
     };
 
     player.animate();
 
-    gameSpeed += 0.005;
+    gameSpeed += 0.010;
 
 };
+
+let song = new Audio('./docs/assets/sounds/Stranger_Things_8Bit_Sound.mp3');
+song.loop = true;
 
 
 // bonus-> criar uma outra classe de demons, so que puxando aquela mesma e usar mais um loop pra criar os demons
