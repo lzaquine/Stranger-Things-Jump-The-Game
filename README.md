@@ -19,7 +19,7 @@
 <br>
 <h3><strong>Difficulties:</strong></h3>
 <ul><li>The challenges were many, but after 3 intense weeks of studying and with the knowledge acquired in the bootcamp, I managed to develop a simple and objective game. I had a lot of support and help from my colleagues and teachers (thanks a lot <em><strong>André</strong></em> and <em><strong>Xico</strong></em>!) to get it done.</li>
-<li>The steps were, benchmark, design concept, user study as I passed it on to many adults and children to test, and of course the code. Developing anything does not depend only on the code, but on several criterias to reach the expected result. I was able to work on a topic I like, and code :-)</li></ul>
+<li>The steps were: benchmark, design concept, user study as I passed it on to many adults and children to test, and of course the code. Developing anything does not depend only on the code, but on several criterias to reach the expected result. I was able to work on a topic I like, and code :-)</li></ul>
 <br>
 <br>
 <br>
