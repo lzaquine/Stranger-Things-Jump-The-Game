@@ -185,11 +185,3 @@ body {
 .second-background {
   background-image: url("./docs/assets/images/Background_2.gif");
 }
-/* #canvas2 {
-    border: 2px solid red; 
-    position: absolute;
-    top: 40%;
-    left: 70%;
-    opacity: 55%;
-    transform: skew(3deg);
-} */
