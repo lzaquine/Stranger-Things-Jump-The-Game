@@ -1,6 +1,21 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+let images;
+
+
+    images = [
+        "./docs/assets/images/player_frames_img/img_player_1_top.png",
+        "./docs/assets/images/player_frames_img/img_player_2_top.png",
+        "./docs/assets/images/player_frames_img/img_player_3_top.png",
+        "./docs/assets/images/player_frames_img/img_player_4_top.png",
+        "./docs/assets/images/player_frames_img/img_player_5_top.png",
+        "./docs/assets/images/player_frames_img/img_player_6_top.png",
+        "./docs/assets/images/player_frames_img/img_player_7_top.png",
+        "./docs/assets/images/player_frames_img/img_player_8_top.png",
+      ]
+
+
 const titleScreen = document.getElementById('title-screen');
 const levelsScreen = document.getElementById('levels');
 const gameOverScreen = document.getElementById('game-over-screen');
@@ -38,7 +53,8 @@ restartButton.onclick = () => {
 
 const cWidth = canvas.width;
 const cHeight = canvas.height;
-    
+ 
+let frames = 0;
 let player;
 let gravity;
 let obstacles = [];
@@ -67,6 +83,7 @@ let initialSpawTimer = 180;
 let spawnTimer = initialSpawTimer;
 
 function update() {
+    frames++;
     ctx.clearRect(0, 0, cWidth, cHeight);
 
     spawnTimer--;
@@ -102,6 +119,7 @@ function update() {
     };
 
     player.animate();
+    player.playerDraw(frames)
     gameSpeed += 0.010;
 };
 

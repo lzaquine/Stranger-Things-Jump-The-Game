@@ -9,10 +9,34 @@ class Player {
     this.grounded = false;
     this.jumpTimer = 0;
 
-    const img = new Image();
-    img.addEventListener("load", () => {});
-    img.src = "./docs/assets/images/Small_Char.png";
-    this.img = img;
+    const img1 = new Image();
+    const img2 = new Image();
+    const img3 = new Image();
+    const img4 = new Image();
+    const img5 = new Image();
+    const img6 = new Image();
+    const img7 = new Image();
+    const img8 = new Image();
+
+    img1.addEventListener("load", () => {})
+    img1.src = "./docs/assets/images/player_frames_img/img_player_1.png";
+    img2.addEventListener("load", () => {})
+    img2.src = "./docs/assets/images/player_frames_img/img_player_2.png";
+    img3.addEventListener("load", () => {})
+    img3.src = "./docs/assets/images/player_frames_img/img_player_3.png";
+    img4.addEventListener("load", () => {})
+    img4.src = "./docs/assets/images/player_frames_img/img_player_4.png";
+    img5.addEventListener("load", () => {})
+    img5.src = "./docs/assets/images/player_frames_img/img_player_5.png";
+    img6.addEventListener("load", () => {})
+    img6.src = "./docs/assets/images/player_frames_img/img_player_6.png";
+    img7.addEventListener("load", () => {})
+    img7.src = "./docs/assets/images/player_frames_img/img_player_7.png";
+    img8.addEventListener("load", () => {})
+    img8.src = "./docs/assets/images/player_frames_img/img_player_8.png";
+
+    this.img = img1;
+    this.images = [img1, img2, img3, img4, img5, img6, img7, img8]
   };
 
   left() {
@@ -40,7 +64,7 @@ class Player {
     );
   };
 
-  animate() {
+  animate(frames) {
     if (keys["KeyZ"]) {
       this.jump();
     } else {
@@ -57,7 +81,6 @@ class Player {
       this.grounded = true;
       this.y = cHeight - this.height;
     }
-    this.playerDraw();
   };
 
   jump() {
@@ -70,8 +93,10 @@ class Player {
     };
   };
 
-  playerDraw() {
+  playerDraw(frames) {
+    this.img = this.images[Math.floor(frames % 120  / 15)]; 
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+ 
   };
 };
 
