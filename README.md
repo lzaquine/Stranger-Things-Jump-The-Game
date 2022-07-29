@@ -53,7 +53,7 @@
 <br>
 <h3><strong>To do:</strong></h3>
 <ul>
-<li>Animate both players.</li>
+<li>Animate both players. :white_check_mark:</li> 
 <li>Make it responsive.</li>
 <li>Add more obstacles (demogorgons).</li>
 <li>Add score and high score board.</li>
