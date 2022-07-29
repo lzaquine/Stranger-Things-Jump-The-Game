@@ -94,7 +94,7 @@ class Player {
   };
 
   playerDraw(frames) {
-    this.img = this.images[Math.floor(frames % 120  / 15)]; 
+    this.img = this.images[Math.floor(frames % 30  / 3.75)]; 
     ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
  
   };
