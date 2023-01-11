@@ -118,6 +118,10 @@ function update() {
         demon.update();
     };
 
+    canvas.addEventListener('touchstart', function(event) {
+        player.jump();
+      });
+
     player.animate();
     player.playerDraw(frames)
     gameSpeed += 0.010;
