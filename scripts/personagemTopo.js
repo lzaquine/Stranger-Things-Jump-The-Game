@@ -5,7 +5,7 @@ class Player2 {
     this.width = width;
     this.height = height;
     this.speedY = 0;
-    this.jumpForce = 13;
+    this.jumpForce = 15;
     this.grounded = false;
     this.jumpTimer = 0;
 
