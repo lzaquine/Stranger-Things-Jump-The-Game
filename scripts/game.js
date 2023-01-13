@@ -65,7 +65,7 @@ let gameSpeed;
 let keys = {};
 let interval = null;
 let isRunning = false;
-let upsideDown = true;
+let upsideDown = false;
 
 function start() {
     interval = setInterval(update, 1000 / 60);
@@ -94,6 +94,7 @@ function update() {
 
     score = frames / 10;
     ctx.font = "20px Benguiat Bold";
+
     if(!upsideDown) {
     if(score < 10) {
         ctx.fillStyle = "black";
@@ -122,6 +123,36 @@ function update() {
     }
     ctx.fillStyle = "red";
     ctx.fillText(`Score: ${Math.round(score)}`, 10, 30);
+}
+
+    if(upsideDown){
+        if(score < 10) {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 520, 115, 38);
+        } else if(score > 10 && score < 100) {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 520, 130, 38);
+        } else if(score > 100 && score < 1000) {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 520, 145, 38);
+        } else if(score > 1000) {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 520, 160, 38);
+        }
+        if(levels === 666) {
+            ctx.fillStyle = "black";
+            ctx.fillRect(330, 240, 110, 50);
+            ctx.fillStyle = "red";
+            ctx.fillText(`${levels} ˥˥ƎH`, 340, 275);
+        } else {
+            ctx.fillStyle = "black";
+            ctx.fillRect(625, 520, 110, 35);
+            ctx.fillStyle = "red";
+            ctx.fillText(`-${levels} :lǝʌǝ˥`, 630, 540);
+    
+        }
+        ctx.fillStyle = "red";
+        ctx.fillText(`-${Math.round(score)} :ǝɹoɔS`, 12, 540);
     }
 
 
@@ -137,12 +168,11 @@ function update() {
             if(frames > 250) {
                 spawnTimer = 125;
                 levels = 1
-                spawnNextBat();
             } 
             if(frames > 500) {
                 spawnTimer = 100;
                 levels = 2
-                
+                spawnNextBat();
             }
             if(frames > 1000) {
                 spawnTimer = 90
