@@ -29,7 +29,7 @@ class Obstacle {
   };
 
   update() {
-    this.x += this.speedX;
+    this.x += this.speedX / 2.5;
     this.demonDraw();
     this.speedX = -gameSpeed;
   };
@@ -43,13 +43,15 @@ function spawnObstacle() {
     let size = demonSize(65, 65);
     let obstacle;
 
-    if (player.y <= 50) {
+    if (player.y <= 150) {
         obstacle = new Obstacle2(700, 0, size, size);
     } else {
         obstacle = new Obstacle(730 + size, 552 - size, size, size);
     };
 
-    obstacles.push(obstacle);
+    Math.random(obstacles.push(obstacle));
+    console.log(obstacle)
+    
 };
 
 function demonSize(min, max){
