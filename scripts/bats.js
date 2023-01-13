@@ -70,7 +70,7 @@ class Bats {
         if (player.y <= 150) {
             obstacle = new Bats2(700, 233, size, size);
         } else {
-            obstacle = new Bats(730 + size, 185 - size, size, size);
+            obstacle = new Bats(730 + size, 215 - size, size, size);
         }
         Math.random(obstacles.push(obstacle) + 1);
     };
