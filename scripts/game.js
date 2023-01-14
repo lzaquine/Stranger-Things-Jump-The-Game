@@ -111,7 +111,7 @@ function update() {
     }
     if(levels === 666) {
         ctx.fillStyle = "black";
-        ctx.fillRect(330, 240, 110, 50);
+        ctx.fillRect(330, 240, 110, 55);
         ctx.fillStyle = "red";
         ctx.fillText(`HELL ${levels}`, 340, 275);
     } else {
@@ -141,9 +141,9 @@ function update() {
         }
         if(levels === 666) {
             ctx.fillStyle = "black";
-            ctx.fillRect(330, 240, 110, 50);
+            ctx.fillRect(330, 240, 110, 55);
             ctx.fillStyle = "red";
-            ctx.fillText(`${levels} ˥˥ƎH`, 340, 275);
+            ctx.fillText(`-${levels} ˥˥ƎH`, 340, 275);
         } else {
             ctx.fillStyle = "black";
             ctx.fillRect(625, 520, 110, 35);
