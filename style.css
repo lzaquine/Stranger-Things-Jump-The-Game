@@ -186,6 +186,17 @@ body {
   background-image: url("./docs/assets/images/Background_2.gif");
 }
 
+#highScores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  line-height: 4.5vh;
+  top: 62vh;
+  right: 51.5vw;
+}
+
 @media screen and (max-width: 768px) {
 
   #canvas {
@@ -315,4 +326,14 @@ body {
     border-radius: 10px;
   }
 
+  #highScores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    line-height: 4.5vh;
+    top: 52vh;
+    right: 40vw;
+  }
 }

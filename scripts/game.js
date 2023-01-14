@@ -25,6 +25,7 @@ const restartButton = document.getElementById('restart-button');
 const normalButton = document.getElementById('btn-normal');
 const upsideDownButton = document.getElementById('btn-upsideDown');
 
+
 titleButton.onclick = () => {
     song.play();
     titleScreen.classList.toggle('hidden');
@@ -67,9 +68,10 @@ let interval = null;
 let isRunning = false;
 let upsideDown = false;
 
+
 function start() {
     interval = setInterval(update, 1000 / 60);
-    isRunning = true; 
+    isRunning = true;
     gameSpeed = 15;
     gravity = 0.9;
     upsideDown = false;
@@ -94,6 +96,43 @@ function update() {
 
     score = frames / 10;
     ctx.font = "20px Benguiat Bold";
+
+    /* Highscore */
+    let highScore1 = localStorage.getItem("highScore1");
+    let highScore2 = localStorage.getItem("highScore2");
+    let highScore3 = localStorage.getItem("highScore3");
+
+    let highLevel1 = localStorage.getItem("highLevel1");
+    let highLevel2 = localStorage.getItem("highLevel2");
+    let highLevel3 = localStorage.getItem("highLevel3");
+
+    
+    let highScoreElement1 = document.getElementById("highScore1");
+    let highScoreElement2 = document.getElementById("highScore2");
+    let highScoreElement3 = document.getElementById("highScore3");
+
+    
+    highScoreElement1.innerHTML = Math.round(highScore1) + " on level " + highLevel1;
+    highScoreElement2.innerHTML = Math.round(highScore2) + " on level " + highLevel2;
+    highScoreElement3.innerHTML = Math.round(highScore3) + " on level " + highLevel3;
+
+    if(score > highScore1) {
+        localStorage.setItem("highScore1", score);
+        if(levels > highLevel1) {
+            localStorage.setItem("highLevel1", levels);
+          } 
+      } else if(score > highScore2) {
+        localStorage.setItem("highScore2", score);
+        if(levels > highLevel2) {
+            localStorage.setItem("highLevel2", levels);
+          } 
+      } else if(score > highScore3) {
+        localStorage.setItem("highScore3", score);
+        if(levels > highLevel3) {
+            localStorage.setItem("highLevel3", levels);
+          }
+      }
+
 
     if(!upsideDown) {
     if(score < 10) {
@@ -264,12 +303,19 @@ function update() {
     player.animate();
     player.playerDraw(frames)
     gameSpeed += 0.010;
-    console.log(obstacles)
+    /* console.log(obstacles)
     console.log(frames)
     console.log(spawnTimer)
     console.log(levels)
-
+    console.log(highLevel1)
+    console.log(highLevel2)
+    console.log(highLevel3)
+    console.log(highScore1)
+    console.log(highScore2)
+    console.log(highScore3) */
+    
 };
+
 
 let song = new Audio('./docs/assets/sounds/som_1.mp3');
 song.loop = true;
