@@ -81,7 +81,7 @@ body {
   position: absolute;
   font-size: 14px;
   top: 73%;
-  right: 46%
+  right: 45%
 }
 .level_P {
   position: absolute;
@@ -109,6 +109,38 @@ body {
   padding: 10px;
   transform: rotate(180deg);
   border-radius: 50px;
+}
+#btn-dustin {
+  position: absolute;
+  top: 55%;
+  left: 31%;
+  font-size: 24px;
+  flex-wrap: wrap;
+  border: 4px solid red;
+  border-radius: 50px;
+  padding: 10px;
+}
+#btn-hopper {
+  position: absolute;
+  top: 55%;
+  right: 42%;
+  font-size: 24px;
+  flex-wrap: wrap;
+  border: 4px solid red;
+  padding: 10px;
+  border-radius: 50px;
+}
+.dustin_Left_Level {
+  position: absolute;
+  left: 33%;
+  bottom: 45%;
+  width: 65px;
+}
+.hopper_Right_Level {
+  position: absolute;
+  width: 45px;
+  bottom: 45%;
+  right: 45%;
 }
 #zToJump_Level {
     position: absolute;
@@ -185,7 +217,6 @@ body {
 .second-background {
   background-image: url("./docs/assets/images/Background_2.gif");
 }
-
 #highScores {
   display: flex;
   flex-direction: column;
@@ -208,7 +239,6 @@ body {
     background-size: cover;
     border-radius: 10px;
   }
-
   #game-title {
     top: 22%;
     right: 40%;
@@ -260,7 +290,7 @@ body {
     align-items: center;
   }
   .level_P {
-    top: 25%;
+    top: 27%;
     right: 40%;
     font-size: 14px;
   }
@@ -274,8 +304,29 @@ body {
     right: 38%;
     font-size: 14px;
   }
+  #btn-dustin {
+    top: 40%;
+    left: 33%;
+    font-size: 14px;
+  }
+  #btn-hopper {
+    top: 58%;
+    left: 31%;
+    font-size: 14px;
+    text-align: center;
+  }
+  .dustin_Left_Level {
+    left: 40%;
+    bottom: 60%;
+    width: 28px;
+  }
+  .hopper_Right_Level {
+    width: 28px;
+    bottom: 42%;
+    right: 53%;
+  }
   #zToJump_Level {
-    top: 62%;
+    top: 68%;
     right: 35%;
     left: 34%;
     font-size: 14px;
@@ -325,7 +376,6 @@ body {
     width: 35px;
     border-radius: 10px;
   }
-
   #highScores {
     display: flex;
     flex-direction: column;
