@@ -1,30 +1,18 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-let images;
-
-
-    images = [
-        "./docs/assets/images/player_frames_img/img_player_1_top.png",
-        "./docs/assets/images/player_frames_img/img_player_2_top.png",
-        "./docs/assets/images/player_frames_img/img_player_3_top.png",
-        "./docs/assets/images/player_frames_img/img_player_4_top.png",
-        "./docs/assets/images/player_frames_img/img_player_5_top.png",
-        "./docs/assets/images/player_frames_img/img_player_6_top.png",
-        "./docs/assets/images/player_frames_img/img_player_7_top.png",
-        "./docs/assets/images/player_frames_img/img_player_8_top.png",
-      ]
-
-
 const titleScreen = document.getElementById('title-screen');
 const levelsScreen = document.getElementById('levels');
+const playerScreen = document.getElementById('pickPlayer');
 const gameOverScreen = document.getElementById('game-over-screen');
 const bgTVScreen = document.getElementById('bk-tv');
 const titleButton = document.getElementById('title-button');
 const restartButton = document.getElementById('restart-button');
 const normalButton = document.getElementById('btn-normal');
 const upsideDownButton = document.getElementById('btn-upsideDown');
-
+const hopperButton = document.getElementById('btn-hopper');
+const dustinButton = document.getElementById('btn-dustin');
+let upsideDown = false;
 
 titleButton.onclick = () => {
     song.play();
@@ -34,19 +22,46 @@ titleButton.onclick = () => {
 
 normalButton.onclick = () => {
     levelsScreen.classList.toggle('hidden');
+    playerScreen.classList.toggle('hidden');
+    upsideDown = false;
+};
+upsideDownButton.onclick = () => {
+    levelsScreen.classList.toggle('hidden');
+    playerScreen.classList.toggle('hidden');
+    upsideDown = true;
+};
+hopperButton.onclick = () => {
+    if(!upsideDown) {
+        playerScreen.classList.toggle('hidden');
     canvas.classList.toggle('hidden');
     canvas.classList.toggle('first-background');
     bgTVScreen.classList.toggle('hidden');
     start();
-};
-upsideDownButton.onclick = () => {
-    levelsScreen.classList.toggle('hidden');
+    } 
+    if(upsideDown) {
+        playerScreen.classList.toggle('hidden');
+        canvas.classList.toggle('hidden');
+        canvas.classList.toggle('second-background');
+        bgTVScreen.classList.toggle('hidden');
+        startUpsideDown();
+    }
+}
+dustinButton.onclick = () => {
+    if(!upsideDown) {
+    playerScreen.classList.toggle('hidden');
     canvas.classList.toggle('hidden');
-    canvas.classList.toggle('second-background');
+    canvas.classList.toggle('first-background');
     bgTVScreen.classList.toggle('hidden');
-    startUpsideDown();
-};
-
+    startDustin();
+    } 
+    if(upsideDown) {
+        playerScreen.classList.toggle('hidden');
+        canvas.classList.toggle('hidden');
+        canvas.classList.toggle('second-background');
+        bgTVScreen.classList.toggle('hidden');
+        startUpsideDownDustin();
+    }
+}
 restartButton.onclick = () => {
     gameOverScreen.classList.toggle('hidden');
     titleScreen.classList.toggle('hidden');
@@ -66,7 +81,6 @@ let gameSpeed;
 let keys = {};
 let interval = null;
 let isRunning = false;
-let upsideDown = false;
 
 
 function start() {
@@ -77,6 +91,24 @@ function start() {
     upsideDown = false;
     player = new Player(125, 10, 50, 100);
 };
+
+function startDustin() {
+    interval = setInterval(update, 1000 / 60);
+    isRunning = true;
+    gameSpeed = 15;
+    gravity = 0.9;
+    upsideDown = false;
+    player = new Dustin(125, 10, 60, 90);
+}
+
+function startUpsideDownDustin() {
+    interval = setInterval(update, 1000 / 60);
+    isRunning = true; 
+    gameSpeed = 15;
+    gravity = 0.9;
+    upsideDown = true;
+    player = new Dustin2(125, 5, 60, 90);
+}
 
 function startUpsideDown() {
     interval = setInterval(update, 1000 / 60);
@@ -301,7 +333,7 @@ function update() {
       });
 
     player.animate();
-    player.playerDraw(frames)
+    player.playerDraw(frames);
     gameSpeed += 0.010;
     /* console.log(obstacles)
     console.log(frames)
