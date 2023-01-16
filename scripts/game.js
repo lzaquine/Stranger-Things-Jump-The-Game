@@ -78,12 +78,14 @@ let gravity;
 let obstacles = [];
 let bats = [];
 let slimes = [];
+let dogs = [];
 let gameSpeed;
 let keys = {};
 let interval = null;
 let isRunning = false;
 let spawnObst = false;
 let spawnSlim = false;
+let spawnDog = false;
 
 
 function start() {
@@ -238,6 +240,9 @@ function update() {
         if(spawnSlim) {
             spawnSlimes();
         }
+        if(spawnDog) {
+            spawnDogs();
+        }
         spawnBats();
         spawnTimer = initialSpawTimer - gameSpeed * 5500;
         
@@ -250,23 +255,23 @@ function update() {
                 levels = 1
             } 
             if(frames > 500) {
-                spawnObst = false;
-                spawnSlim = true;
                 spawnTimer = 100;
                 levels = 2
                 spawnNextBat();
             }
             if(frames > 1000) {
+                spawnObst = false;
+                spawnDog = true;
                 spawnTimer = 90
                 levels = 3
             }
             if(frames > 1500) {
-                spawnObst = true;
-                spawnSlim = false;
                 spawnTimer = 80
                 levels = 4
             }
             if(frames > 2000) {
+                spawnDog = false;
+                spawnSlim = true;
                 spawnTimer = 70
                 levels = 5
             } 
@@ -275,10 +280,14 @@ function update() {
                 levels = 6
             }
             if(frames > 3000) {
+                spawnSlim = false;
+                spawnObst = true;
                 spawnTimer = 55;
                 levels = 7
             }
             if(frames > 5000) {
+                spawnObst = false;
+                spawnDog = true;
                 spawnTimer = 50;
                 levels = 8
             }
@@ -302,8 +311,10 @@ function update() {
         if (player.colision(demon)) {
           obstacles = [];
           slimes = [];
+          dogs = [];
           spawnSlim = false;
           spawnObst = false;
+          spawnDog = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
@@ -329,8 +340,10 @@ function update() {
         if (player.colision(slime)) {
           obstacles = [];
           slimes = [];
+          dogs = [];
           spawnSlim = false;
           spawnObst = false;
+          spawnDog = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
@@ -347,6 +360,35 @@ function update() {
         slime.update();
     };
 
+    for (let i = 0; i < dogs.length; i++) {
+        let dog = dogs[i];
+        if (dog.x + dog.width < 0) {
+            dogs.splice(i, 1);
+        };
+
+        if (player.colision(dog)) {
+          obstacles = [];
+          slimes = [];
+          dogs = [];
+          spawnSlim = false;
+          spawnObst = false;
+          spawnDog = false;
+          clearInterval(interval);
+          isRunning = false;
+          spawnTimer = initialSpawTimer;
+          frames = 0;
+          levels = 0;
+          gameSpeed = 15;
+          canvas.classList.toggle('hidden')
+          canvas.classList.remove('first-background')
+          canvas.classList.remove('second-background')
+          gameOverScreen.classList.toggle('hidden')
+          bgTVScreen.classList.toggle('hidden')
+        };
+
+        dogs.update();
+    };
+
     for (let i = 0; i < bats.length; i++) {
         let bat = bats[i];
         if (bat.x + bat.width < 0) {
@@ -357,8 +399,10 @@ function update() {
           bats = [];
           obstacles = [];
           slimes = [];
+          dogs = [];
           spawnSlim = false;
           spawnObst = false;
+          spawnDog = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
