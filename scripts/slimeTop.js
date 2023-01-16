@@ -54,11 +54,12 @@ class Slime2 {
   
     update() {
       this.x += this.speedX / 2.5;
-      this.demonDraw();
+      this.slimeDraw(frames);
       this.speedX = -gameSpeed;
     };
   
-    demonDraw() {
-      ctx.drawImage(this.img5, this.x, this.y, 65, 65);
+    slimeDraw(frames) {
+      this.img5 = this.images[Math.floor(frames % 60  / 7.5)]; 
+      ctx.drawImage(this.img5, this.x, this.y, this.width, this.height);
     };
   };
