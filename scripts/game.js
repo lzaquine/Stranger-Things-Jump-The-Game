@@ -484,17 +484,6 @@ function update() {
     player.animate();
     player.playerDraw(frames);
     gameSpeed += 0.010;
-    /* console.log(obstacles)
-    console.log(frames)
-    console.log(spawnTimer)
-    console.log(levels)
-    console.log(highLevel1)
-    console.log(highLevel2)
-    console.log(highLevel3)
-    console.log(highScore1)
-    console.log(highScore2)
-    console.log(highScore3) */
-    
 };
 
 
