@@ -88,6 +88,7 @@ let spawnObst = false;
 let spawnSlim = false;
 let spawnDog = false;
 let spawnDemon = false;
+let spawn2Bat = false;
 
 
 function start() {
@@ -248,6 +249,9 @@ function update() {
         if(spawnDemon) {
             spawnDemogorgon();
         }
+        if(spawn2Bat) {
+            spawnNextBat();
+        }
         spawnBats();
         spawnTimer = initialSpawTimer - gameSpeed * 5500;
         
@@ -262,7 +266,7 @@ function update() {
             if(frames > 500) {
                 spawnTimer = 100;
                 levels = 2
-                spawnNextBat();
+                spawn2Bat = true;
             }
             if(frames > 1000) {
                 spawnDemon = false;
@@ -273,6 +277,7 @@ function update() {
             if(frames > 1500) {
                 spawnTimer = 80
                 levels = 4
+                spawn2Bat = false;
             }
             if(frames > 2000) {
                 spawnDog = false;
@@ -289,18 +294,21 @@ function update() {
                 spawnObst = true;
                 spawnTimer = 55;
                 levels = 7
+                spawn2Bat = true;
             }
             if(frames > 5000) {
                 spawnObst = false;
                 spawnDog = true;
                 spawnTimer = 50;
                 levels = 8
+                spawn2Bat = false;
             }
             if(frames > 6666) {
                 spawnDog = false;
                 spawnDemon = true;
                 spawnTimer = 45;
                 levels = 666
+                spawn2Bat = true;
             }
             if(frames > 9999) {
                 spawnTimer = 40;
@@ -324,6 +332,7 @@ function update() {
           spawnSlim = false;
           spawnObst = false;
           spawnDog = false;
+          spawn2Bat = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
@@ -355,6 +364,7 @@ function update() {
           spawnSlim = false;
           spawnObst = false;
           spawnDog = false;
+          spawn2Bat = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
@@ -386,6 +396,7 @@ function update() {
           spawnSlim = false;
           spawnObst = false;
           spawnDog = false;
+          spawn2Bat = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
@@ -416,6 +427,7 @@ function update() {
           spawnSlim = false;
           spawnObst = false;
           spawnDog = false;
+          spawn2Bat = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
@@ -448,6 +460,7 @@ function update() {
           spawnSlim = false;
           spawnObst = false;
           spawnDog = false;
+          spawn2Bat = false;
           clearInterval(interval);
           isRunning = false;
           spawnTimer = initialSpawTimer;
