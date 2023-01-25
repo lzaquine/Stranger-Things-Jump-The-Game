@@ -69,9 +69,9 @@ class Slime {
         let obstacle;
     
         if (player.y <= 150) {
-            obstacle = new Slime2(780, 0, size, size);
+            obstacle = new Slime2(800, 0, size, size);
         } else {
-            obstacle = new Slime(780 + size, 552 - size, size, size);
+            obstacle = new Slime(800 + size, 552 - size, size, size);
         }
         Math.random(obstacles.push(obstacle));
         console.log(obstacle)

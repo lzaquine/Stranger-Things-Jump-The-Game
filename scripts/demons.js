@@ -44,9 +44,9 @@ function spawnObstacle() {
     let obstacle;
 
     if (player.y <= 150) {
-        obstacle = new Obstacle2(780, 0, size, size);
+        obstacle = new Obstacle2(800, 0, size, size);
     } else {
-        obstacle = new Obstacle(780 + size, 552 - size, size, size);
+        obstacle = new Obstacle(800 + size, 552 - size, size, size);
     };
 
     Math.random(obstacles.push(obstacle));
