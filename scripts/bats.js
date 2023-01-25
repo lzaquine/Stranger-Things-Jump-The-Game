@@ -68,7 +68,7 @@ class Bats {
         let obstacle;
     
         if (player.y <= 150) {
-            obstacle = new Bats2(700, 230, size, size);
+            obstacle = new Bats2(700, 275, size, size);
         } else {
             obstacle = new Bats(730 + size, 170 - size, size, size);
         }
