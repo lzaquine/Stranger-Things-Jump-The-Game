@@ -387,3 +387,128 @@ body {
     right: 40vw;
   }
 }
+
+@media screen and (max-height: 400px) {
+        #game-title {
+          top: 24%;
+          right: 45%;
+          position: absolute;
+          width: 150px;
+        }
+        #jump {
+            position: absolute;
+            font-size: 22px;
+            top: 41%;
+            right: 49%;
+        }
+        #title-button {
+          position: absolute;
+          top: 52%;
+          right: 43%;
+          font-size: 20px;
+          flex-wrap: wrap;
+          border: 4px solid red;
+          border-radius: 50px;
+          padding: 10px;
+        }
+        .demon_Left {
+          position: absolute;
+          right: 66.5%;
+          bottom: 36%;
+          width: 50px;
+        }
+        .demon_Right {
+          position: absolute;
+          left: 57%;
+          bottom: 36%;
+          width: 50px;
+        }
+        #zToJump_Start {
+          position: absolute;
+          font-size: 10px;
+          top: 78%;
+          right: 42%
+        }
+        .level_P {
+          top: 29%;
+          right: 43%;
+          font-size: 20px;
+        }
+        #btn-normal {
+          top: 52%;
+          left: 31%;
+          font-size: 14px;
+        }
+        #btn-upsideDown {
+          top: 52%;
+          right: 38%;
+          font-size: 14px;
+        }
+        #zToJump_Level {
+          top: 78%;
+          right: 42%;
+          font-size: 10px;
+        }
+        .demon_Left_Level {
+          left: 35%;
+          bottom: 49%;
+          width: 35px;
+        }
+        .demon_Right_Level {
+          transform: rotate(180deg);
+          width: 35px;
+          bottom: 27%;
+          right: 45%;
+        }
+        #btn-dustin {
+          top: 58%;
+          left: 33%;
+          font-size: 14px;
+        }
+        #btn-hopper {
+          top: 58%;
+          right: 42%;
+          font-size: 14px;
+          text-align: center;
+        }
+        .dustin_Left_Level {
+          left: 35%;
+          bottom: 42%;
+          width: 42px;
+        }
+        .hopper_Right_Level {
+          width: 28px;
+          bottom: 42%;
+          right: 46%;
+        }
+        #game-over {
+          font-size: 30px;
+          position: absolute;
+          top: 28%;
+          right: 43%;
+        }
+        .try-again-button {
+          position: absolute;
+          font-size: 18px;
+          top: 48%;
+          right: 48%
+        }
+        #restart-button {
+          position: absolute;
+          top: 55%;
+          right: 54%;
+          width: 35px;
+          border-radius: 10px;
+        }
+        #highScores {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          position: absolute;
+          line-height: 6vh;
+          top: 65vh;
+          right: 49vw;
+          font-size: 14px;
+        }
+}
