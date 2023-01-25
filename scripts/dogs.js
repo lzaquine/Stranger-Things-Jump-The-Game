@@ -69,9 +69,9 @@ class Dogs {
         let obstacle;
     
         if (player.y <= 150) {
-            obstacle = new Dogs2(700, 0, size, size);
+            obstacle = new Dogs2(780, 0, size, size);
         } else {
-            obstacle = new Dogs(730 + size, 552 - size, size, size);
+            obstacle = new Dogs(780 + size, 552 - size, size, size);
         }
         Math.random(obstacles.push(obstacle));
         console.log(obstacle)

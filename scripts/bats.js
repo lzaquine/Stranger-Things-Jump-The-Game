@@ -68,9 +68,9 @@ class Bats {
         let obstacle;
     
         if (player.y <= 150) {
-            obstacle = new Bats2(700, 233, size, size);
+            obstacle = new Bats2(700, 250, size, size);
         } else {
-            obstacle = new Bats(730 + size, 215 - size, size, size);
+            obstacle = new Bats(730 + size, 190 - size, size, size);
         }
         Math.random(obstacles.push(obstacle) + 1);
     };

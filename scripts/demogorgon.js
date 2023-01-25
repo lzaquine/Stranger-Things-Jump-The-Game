@@ -75,9 +75,9 @@ class Demogorgon {
         let obstacle;
     
         if (player.y <= 150) {
-            obstacle = new Demogorgon2(700, 0, size, size);
+            obstacle = new Demogorgon2(780, 0, size, size);
         } else {
-            obstacle = new Demogorgon(730 + size, 552 - size, size, size);
+            obstacle = new Demogorgon(780 + size, 552 - size, size, size);
         }
         Math.random(obstacles.push(obstacle));
         console.log(obstacle)
