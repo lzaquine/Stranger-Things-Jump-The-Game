@@ -32,7 +32,7 @@
 <br>
 <p>
 <a rel="noopener noreferrer" href="https://lzaquine.github.io/Stranger-Things-Jump-The-Game/" target="_blank">
-<img src="./docs/assets/images/Start_Screen_ST_Game.png" style="max-width: 100%;"> </a></p>
+<img src="./docs/assets/images/stg.png" style="max-width: 100%;"> </a></p>
 <br>
 <h3><strong>Controls:</strong></h3>
 <table>
@@ -48,7 +48,7 @@
 <td style="border: 2px solid grey;">Jump the demogorgons.</td>
 </tr>
 <tr style="border: 2px solid grey;">
-<td style="border: 2px solid grey;"><strong><code>Touch your screen</code></strong></td>
+<td style="border: 2px solid grey;"><strong><code>Touch the screen</code></strong></td>
 <td style="border: 2px solid grey;">Jump the demogorgons.</td>
 </tr>
 </tbody>
