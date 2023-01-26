@@ -45,7 +45,11 @@
 <tbody style="border: 2px solid grey;">
 <tr style="border: 2px solid grey;">
 <td style="border: 2px solid grey;"><strong><code>Z</code></strong></td>
-<td style="border: 2px solid grey;">Jump and avoid the demogorgons.</td>
+<td style="border: 2px solid grey;">Jump the demogorgons.</td>
+</tr>
+<tr style="border: 2px solid grey;">
+<td style="border: 2px solid grey;"><strong><code>Touch your screen</code></strong></td>
+<td style="border: 2px solid grey;">Jump the demogorgons.</td>
 </tr>
 </tbody>
 </table>
@@ -53,10 +57,10 @@
 <br>
 <h3><strong>To do:</strong></h3>
 <ul>
-<li>Animate both players. :white_check_mark:</li> 
-<li>Make it responsive.</li>
-<li>Add more obstacles (demogorgons).</li>
-<li>Add score and high score board.</li>
+<li>Animate both players. ✅</li> 
+<li>Make it responsive. 🤏✅</li>
+<li>Add more obstacles (demogorgons). ✅</li>
+<li>Add score and high score board. ✅</li>
 <li>Add jump sound effect.</li>
 </ul>
 <br>
