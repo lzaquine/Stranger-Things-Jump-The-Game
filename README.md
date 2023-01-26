@@ -61,6 +61,10 @@
 <li>Make it responsive. 🤏✅</li>
 <li>Add more obstacles (demogorgons). ✅</li>
 <li>Add score and high score board. ✅</li>
+<li>Add more characters.</li>
+<li>Fix 666 level & change bg img.</li>
+<li>Add buttons to navigate.</li>
+<li>Add instructions & home page.</li>
 <li>Add jump sound effect.</li>
 </ul>
 <br>
