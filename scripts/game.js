@@ -72,7 +72,7 @@ const cHeight = canvas.height;
  
 let frames = 0;
 let score = 0;
-let levels = 0;
+let levels = 1;
 let player;
 let gravity;
 let obstacles = [];
@@ -261,7 +261,7 @@ function update() {
             
             if(frames > 250) {
                 spawnTimer = 125;
-                levels = 1
+                
             } 
             if(frames > 500) {
                 spawnTimer = 100;
@@ -337,7 +337,7 @@ function update() {
           isRunning = false;
           spawnTimer = initialSpawTimer;
           frames = 0;
-          levels = 0;
+          levels = 1;
           gameSpeed = 15;
           canvas.classList.toggle('hidden')
           canvas.classList.remove('first-background')
@@ -369,7 +369,7 @@ function update() {
           isRunning = false;
           spawnTimer = initialSpawTimer;
           frames = 0;
-          levels = 0;
+          levels = 1;
           gameSpeed = 15;
           canvas.classList.toggle('hidden')
           canvas.classList.remove('first-background')
@@ -401,7 +401,7 @@ function update() {
           isRunning = false;
           spawnTimer = initialSpawTimer;
           frames = 0;
-          levels = 0;
+          levels = 1;
           gameSpeed = 15;
           canvas.classList.toggle('hidden')
           canvas.classList.remove('first-background')
@@ -432,7 +432,7 @@ function update() {
           isRunning = false;
           spawnTimer = initialSpawTimer;
           frames = 0;
-          levels = 0;
+          levels = 1;
           gameSpeed = 15;
           canvas.classList.toggle('hidden')
           canvas.classList.remove('first-background')
@@ -465,7 +465,7 @@ function update() {
           isRunning = false;
           spawnTimer = initialSpawTimer;
           frames = 0;
-          levels = 0;
+          levels = 1;
           gameSpeed = 15;
           canvas.classList.toggle('hidden')
           canvas.classList.remove('first-background')
