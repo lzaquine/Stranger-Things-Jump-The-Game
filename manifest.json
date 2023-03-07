@@ -1,0 +1,10 @@
+{
+    "name": "Stranger Things Jump",
+    "short_name": "Stranger Things Jump",
+    "start_url": "/",
+    "icons": [{ "src": "docs/assets/images/demogorgon.png", "sizes": "320x320" }],
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}

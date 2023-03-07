@@ -1,5 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+ctx.font = "20px Benguiat Bold";
 
 const titleScreen = document.getElementById('title-screen');
 const levelsScreen = document.getElementById('levels');
@@ -135,7 +136,7 @@ function update() {
     ctx.clearRect(0, 0, cWidth, cHeight);
 
     score = frames / 10;
-    ctx.font = "20px Benguiat Bold";
+    /* ctx.font = "20px Benguiat Bold"; */
 
     /* Highscore */
     let highScore1 = localStorage.getItem("highScore1");
